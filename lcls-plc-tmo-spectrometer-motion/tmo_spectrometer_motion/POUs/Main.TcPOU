@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+  <POU Name="Main" Id="{3f08c9da-acd6-4059-bcf8-867945acb3ea}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM Main
+VAR
+    // Motors
+    // MRCO Axes
+    {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[GasNozzleX-EL7047]^STM Status^Status^Digital input 1;
+                              .bLimitBackwardEnable:=TIIB[GasNozzleX-EL7047]^STM Status^Status^Digital input 2'}
+    {attribute 'pytmc' := '
+        pv: TMO:MRCO:MMS:01
+    '}
+    M1 : DUT_MotionStage := (bPowerSelf:=TRUE,
+    nEnableMode:=ENUM_StageEnableMode.ALWAYS,
+    nBrakeMode:= ENUM_StageBrakeMode.NO_BRAKE ); // Gas Nozzle X
+
+    {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[GasNozzleY-EL7047]^STM Status^Status^Digital input 2;
+                              .bLimitBackwardEnable:=TIIB[GasNozzleY-EL7047]^STM Status^Status^Digital input 1'}
+    {attribute 'pytmc' := '
+        pv: TMO:MRCO:MMS:02
+    '}
+    M2 : DUT_MotionStage := (bPowerSelf:=TRUE,
+    nEnableMode:=ENUM_StageEnableMode.ALWAYS,
+    nBrakeMode:= ENUM_StageBrakeMode.NO_BRAKE); // Gas Nozzle Y
+
+    {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[GasNozzleZ-EL7047]^STM Status^Status^Digital input 1;
+                              .bLimitBackwardEnable:=TIIB[GasNozzleZ-EL7047]^STM Status^Status^Digital input 2'}
+    {attribute 'pytmc' := '
+        pv: TMO:MRCO:MMS:03
+    '}
+    M3 : DUT_MotionStage := (bPowerSelf:=TRUE,
+    nEnableMode:=ENUM_StageEnableMode.ALWAYS,
+    nBrakeMode:= ENUM_StageBrakeMode.NO_BRAKE); // Gas Nozzle Z
+
+    {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[SamplePaddleX-EL7047]^STM Status^Status^Digital input 1;
+                              .bLimitBackwardEnable:=TIIB[SamplePaddleX-EL7047]^STM Status^Status^Digital input 2'}
+    {attribute 'pytmc' := '
+        pv: TMO:MRCO:MMS:04
+    '}
+    M4 : DUT_MotionStage := (bPowerSelf:=TRUE,
+    nEnableMode:=ENUM_StageEnableMode.ALWAYS,
+    nBrakeMode:= ENUM_StageBrakeMode.NO_BRAKE); // Sample Paddle X
+
+    {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[SamplePaddleY-EL7047]^STM Status^Status^Digital input 1;
+                              .bLimitBackwardEnable:=TIIB[SamplePaddleY-EL7047]^STM Status^Status^Digital input 2'}
+    {attribute 'pytmc' := '
+        pv: TMO:MRCO:MMS:05
+    '}
+    M5 : DUT_MotionStage := (bPowerSelf:=TRUE, 
+    nEnableMode:=ENUM_StageEnableMode.ALWAYS,
+    nBrakeMode:= ENUM_StageBrakeMode.NO_BRAKE); // Sample Paddle Y
+
+    {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[SamplePaddleZ-EL7047]^STM Status^Status^Digital input 1;
+                              .bLimitBackwardEnable:=TIIB[SamplePaddleZ-EL7047]^STM Status^Status^Digital input 2'}
+    {attribute 'pytmc' := '
+        pv: TMO:MRCO:MMS:06
+    '}
+    M6 : DUT_MotionStage := (bPowerSelf:=TRUE,
+    nEnableMode:=ENUM_StageEnableMode.ALWAYS,
+    nBrakeMode:= ENUM_StageBrakeMode.NO_BRAKE); // Sample Paddle Z
+
+    // MRCO Axes
+    fbMotionStageM1 : FB_MotionStage;
+    fbMotionStageM2 : FB_MotionStage;
+    fbMotionStageM3 : FB_MotionStage;
+    fbMotionStageM4 : FB_MotionStage;
+    fbMotionStageM5 : FB_MotionStage;
+    fbMotionStageM6 : FB_MotionStage;  
+	
+	
+	// Persistent Memory
+	fbWritePersistentData : WritePersistentData;
+	bInit : BOOL := TRUE;
+	fbWriteDelay : TON;
+	mcSetPosition : ARRAY [1..6] of MC_SetPosition;
+END_VAR
+VAR PERSISTENT
+	fGasNozzleXPos : LREAL;
+	fGasNozzleYPos : LREAL;
+	fGasNozzleZPos : LREAL;
+	fSamplePaddleXPos : LREAL;
+	fSamplePaddleYPos : LREAL;
+	fSamplePaddleZPos : LREAL;
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[IF bInit THEN
+	//Sets axes positions with persistent value
+	// Gas Nozzle
+	mcSetPosition[1](Axis:=M1.Axis, Position:=fGasNozzleXPos, Mode:=FALSE, Execute:=TRUE);
+	mcSetPosition[2](Axis:=M2.Axis, Position:=fGasNozzleYPos, Mode:=FALSE, Execute:=TRUE);
+	mcSetPosition[3](Axis:=M3.Axis, Position:=fGasNozzleZPos, Mode:=FALSE, Execute:=TRUE);
+	// Sample Paddle
+    mcSetPosition[4](Axis:=M4.Axis, Position:=fSamplePaddleXPos, Mode:=FALSE, Execute:=TRUE);
+	mcSetPosition[5](Axis:=M5.Axis, Position:=fSamplePaddleYPos, Mode:=FALSE, Execute:=TRUE);
+	mcSetPosition[6](Axis:=M6.Axis, Position:=fSamplePaddleZPos, Mode:=FALSE, Execute:=TRUE);
+    if(mcSetPosition[1].Done and NOT mcSetPosition[1].Error) AND 
+      (mcSetPosition[2].Done and NOT mcSetPosition[2].Error) AND
+	  (mcSetPosition[3].Done and NOT mcSetPosition[3].Error) AND
+	  (mcSetPosition[4].Done and NOT mcSetPosition[4].Error) AND
+	  (mcSetPosition[5].Done and NOT mcSetPosition[5].Error) AND
+	  (mcSetPosition[6].Done and Not mcSetPosition[6].Error) THEN
+	  bInit:=FALSE;
+	  
+	  mcSetPosition[1](Axis:=M1.Axis, Execute:=FALSE);
+	  mcSetPosition[2](Axis:=M2.Axis, Execute:=FALSE);
+	  mcSetPosition[3](Axis:=M3.Axis, Execute:=FALSE);
+	  mcSetPosition[4](Axis:=M4.Axis, Execute:=FALSE);
+	  mcSetPosition[5](Axis:=M5.Axis, Execute:=FALSE);
+	  mcSetPosition[6](Axis:=M6.Axis, Execute:=FALSE);
+	END_IF
+ELSE
+// Hardware Enable
+//Mrco
+// Gas Nozzle
+	M1.bHardwareEnable := TRUE;
+	M2.bHardwareEnable := TRUE;
+	M3.bHardwareEnable := TRUE;
+// Sample Paddle
+	M4.bHardwareEnable := TRUE;
+	M5.bHardwareEnable := TRUE;
+	M6.bHardwareEnable := TRUE;
+    
+// fbMotionStage
+// MRCO
+// Gas Nozzle
+	fbMotionStageM1(stMotionStage:=M1);
+	fbMotionStageM2(stMotionStage:=M2);
+	fbMotionStageM3(stMotionStage:=M3);
+// Sample Paddle	
+	fbMotionStageM4(stMotionStage:=M4);
+	fbMotionStageM5(stMotionStage:=M5);
+	fbMotionStageM6(stMotionStage:=M6);
+
+// Keep track of position
+// Gas Nozzle
+	fGasNozzleXPos := M1.Axis.NcToPlc.ActPos;
+	fGasNozzleYPos := M2.Axis.NcToPlc.ActPos;
+	fGasNozzleZPos := M3.Axis.NcToPlc.ActPos;
+// Sample Paddle
+	fSamplePaddleXPos := M4.Axis.NcToPlc.ActPos;
+	fSamplePaddleYPos := M5.Axis.NcToPlc.ActPos;
+	fSamplePaddleZPos := M6.Axis.NcToPlc.ActPos;	
+
+	IF fbWriteDelay.Q THEN
+		fbWritePersistentData(NETID:='', PORT:=851, START:=TRUE, TMOUT:=T#1S);
+		fbWriteDelay(IN:=FALSE);
+	ELSE
+		fbWritePersistentData(START:=FALSE);
+		fbWriteDelay(IN:=TRUE, PT:=T#0.5S);
+	END_IF
+END_IF;
+
+
+    ]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

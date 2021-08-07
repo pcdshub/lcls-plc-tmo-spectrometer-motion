@@ -5,94 +5,117 @@
 VAR
     // Motors
     // MRCO Axes
-    {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[GasNozzleX-EL7047]^STM Status^Status^Digital input 1;
-                              .bLimitBackwardEnable:=TIIB[GasNozzleX-EL7047]^STM Status^Status^Digital input 2'}
+    {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[LensX-EL1084]^STM Status^Status^Digital input 1;
+                              .bLimitBackwardEnable:=TIIB[LensX-EL1084]^STM Status^Status^Digital input 2'}
     {attribute 'pytmc' := '
-        pv: TMO:MRCO:MMS:01
+        pv: TMO:SPEC:MMS:01
     '}
     M1 : DUT_MotionStage := (bPowerSelf:=TRUE,
-    nEnableMode:=ENUM_StageEnableMode.ALWAYS,
-    nBrakeMode:= ENUM_StageBrakeMode.NO_BRAKE ); // Gas Nozzle X
+    nHomingMode := ENUM_EpicsHomeCmd.ABSOLUTE_SET); // Lens X
 
-    {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[GasNozzleY-EL7047]^STM Status^Status^Digital input 2;
-                              .bLimitBackwardEnable:=TIIB[GasNozzleY-EL7047]^STM Status^Status^Digital input 1'}
+    {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[FoilX-EL7041]^STM Status^Status^Digital input 2;
+                              .bLimitBackwardEnable:=TIIB[FoilX-EL7041]^STM Status^Status^Digital input 1'}
     {attribute 'pytmc' := '
-        pv: TMO:MRCO:MMS:02
+        pv: TMO:SPEC:MMS:02
     '}
     M2 : DUT_MotionStage := (bPowerSelf:=TRUE,
-    nEnableMode:=ENUM_StageEnableMode.ALWAYS,
-    nBrakeMode:= ENUM_StageBrakeMode.NO_BRAKE); // Gas Nozzle Y
+    nHomingMode := ENUM_EpicsHomeCmd.ABSOLUTE_SET); // Foil X
 
-    {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[GasNozzleZ-EL7047]^STM Status^Status^Digital input 1;
-                              .bLimitBackwardEnable:=TIIB[GasNozzleZ-EL7047]^STM Status^Status^Digital input 2'}
+    {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[ZonePlateX-EL7041]^STM Status^Status^Digital input 1;
+                              .bLimitBackwardEnable:=TIIB[ZonePlateX-EL7041]^STM Status^Status^Digital input 2'}
     {attribute 'pytmc' := '
-        pv: TMO:MRCO:MMS:03
+        pv: TMO:SPEC:MMS:03
     '}
     M3 : DUT_MotionStage := (bPowerSelf:=TRUE,
-    nEnableMode:=ENUM_StageEnableMode.ALWAYS,
-    nBrakeMode:= ENUM_StageBrakeMode.NO_BRAKE); // Gas Nozzle Z
+    nHomingMode := ENUM_EpicsHomeCmd.ABSOLUTE_SET); // Zone Plate X
 
-    {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[SamplePaddleX-EL7047]^STM Status^Status^Digital input 1;
-                              .bLimitBackwardEnable:=TIIB[SamplePaddleX-EL7047]^STM Status^Status^Digital input 2'}
+    {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[ZonePlateY-EL7041]^STM Status^Status^Digital input 1;
+                              .bLimitBackwardEnable:=TIIB[ZonePlateY-EL7041]^STM Status^Status^Digital input 2'}
     {attribute 'pytmc' := '
-        pv: TMO:MRCO:MMS:04
+        pv: TMO:SPEC:MMS:04
     '}
     M4 : DUT_MotionStage := (bPowerSelf:=TRUE,
-    nEnableMode:=ENUM_StageEnableMode.ALWAYS,
-    nBrakeMode:= ENUM_StageBrakeMode.NO_BRAKE); // Sample Paddle X
+    nHomingMode := ENUM_EpicsHomeCmd.ABSOLUTE_SET); // Zone Plate Y
 
-    {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[SamplePaddleY-EL7047]^STM Status^Status^Digital input 1;
-                              .bLimitBackwardEnable:=TIIB[SamplePaddleY-EL7047]^STM Status^Status^Digital input 2'}
+    {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[ZonePlateZ-EL7041]^STM Status^Status^Digital input 1;
+                              .bLimitBackwardEnable:=TIIB[ZonePlateZ-EL7041]^STM Status^Status^Digital input 2'}
     {attribute 'pytmc' := '
-        pv: TMO:MRCO:MMS:05
+        pv: TMO:SPEC:MMS:05
     '}
-    M5 : DUT_MotionStage := (bPowerSelf:=TRUE, 
-    nEnableMode:=ENUM_StageEnableMode.ALWAYS,
-    nBrakeMode:= ENUM_StageBrakeMode.NO_BRAKE); // Sample Paddle Y
+    M5 : DUT_MotionStage := (bPowerSelf:=TRUE,
+    nHomingMode := ENUM_EpicsHomeCmd.ABSOLUTE_SET); // Zone Plate Z
 
-    {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[SamplePaddleZ-EL7047]^STM Status^Status^Digital input 1;
-                              .bLimitBackwardEnable:=TIIB[SamplePaddleZ-EL7047]^STM Status^Status^Digital input 2'}
+    {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[YagX-EL7041]^STM Status^Status^Digital input 1;
+                              .bLimitBackwardEnable:=TIIB[YagX-EL7041]^STM Status^Status^Digital input 2'}
     {attribute 'pytmc' := '
-        pv: TMO:MRCO:MMS:06
+        pv: TMO:SPEC:MMS:06
     '}
     M6 : DUT_MotionStage := (bPowerSelf:=TRUE,
-    nEnableMode:=ENUM_StageEnableMode.ALWAYS,
-    nBrakeMode:= ENUM_StageBrakeMode.NO_BRAKE); // Sample Paddle Z
-
-    // MRCO Axes
+    nHomingMode := ENUM_EpicsHomeCmd.ABSOLUTE_SET); // Yag X
+	
+    {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[YagY-EL7041]^STM Status^Status^Digital input 1;
+                              .bLimitBackwardEnable:=TIIB[YagY-EL7041]^STM Status^Status^Digital input 2'}
+    {attribute 'pytmc' := '
+        pv: TMO:SPEC:MMS:07
+    '}
+    M7 : DUT_MotionStage := (bPowerSelf:=TRUE,
+    nHomingMode := ENUM_EpicsHomeCmd.ABSOLUTE_SET); // Yag Y
+	
+	{attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[YagZ-EL7041]^STM Status^Status^Digital input 1;
+                              .bLimitBackwardEnable:=TIIB[YagZ-EL7041]^STM Status^Status^Digital input 2'}
+    {attribute 'pytmc' := '
+        pv: TMO:SPEC:MMS:08
+    '}
+    M8 : DUT_MotionStage := (bPowerSelf:=TRUE,
+    nHomingMode := ENUM_EpicsHomeCmd.ABSOLUTE_SET); // Yag Z
+	
+	{attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[YagTheta-EL7041]^STM Status^Status^Digital input 1;
+                              .bLimitBackwardEnable:=TIIB[YagTheta-EL7041]^STM Status^Status^Digital input 2'}
+    {attribute 'pytmc' := '
+        pv: TMO:SPEC:MMS:09
+    '}
+    M9 : DUT_MotionStage := (bPowerSelf:=TRUE,
+    nHomingMode := ENUM_EpicsHomeCmd.ABSOLUTE_SET); // Yag Theta
+	
+    // Spectrometer Axes
     fbMotionStageM1 : FB_MotionStage;
     fbMotionStageM2 : FB_MotionStage;
     fbMotionStageM3 : FB_MotionStage;
     fbMotionStageM4 : FB_MotionStage;
     fbMotionStageM5 : FB_MotionStage;
-    fbMotionStageM6 : FB_MotionStage;  
+    fbMotionStageM6 : FB_MotionStage;
+    fbMotionStageM7 : FB_MotionStage;               
+    fbMotionStageM8 : FB_MotionStage;
+    fbMotionStageM9 : FB_MotionStage;
 	
-	
+END_VAR
+	(*
 	// Persistent Memory
 	fbWritePersistentData : WritePersistentData;
 	bInit : BOOL := TRUE;
 	fbWriteDelay : TON;
 	mcSetPosition : ARRAY [1..6] of MC_SetPosition;
-END_VAR
+
 VAR PERSISTENT
-	fGasNozzleXPos : LREAL;
-	fGasNozzleYPos : LREAL;
-	fGasNozzleZPos : LREAL;
-	fSamplePaddleXPos : LREAL;
-	fSamplePaddleYPos : LREAL;
-	fSamplePaddleZPos : LREAL;
-END_VAR]]></Declaration>
+	fLensXPos : LREAL;
+	fFoilXPos : LREAL;
+	fZonePlateXPos : LREAL;
+	fZonePlateYPos : LREAL;
+	fZonePlateZPos : LREAL;
+	fYagXPos : LREAL;
+END_VAR
+*)]]></Declaration>
     <Implementation>
-      <ST><![CDATA[IF bInit THEN
+      <ST><![CDATA[(*IF bInit THEN
 	//Sets axes positions with persistent value
 	// Gas Nozzle
-	mcSetPosition[1](Axis:=M1.Axis, Position:=fGasNozzleXPos, Mode:=FALSE, Execute:=TRUE);
-	mcSetPosition[2](Axis:=M2.Axis, Position:=fGasNozzleYPos, Mode:=FALSE, Execute:=TRUE);
-	mcSetPosition[3](Axis:=M3.Axis, Position:=fGasNozzleZPos, Mode:=FALSE, Execute:=TRUE);
+	mcSetPosition[1](Axis:=M1.Axis, Position:=fLensXPos, Mode:=FALSE, Execute:=TRUE);
+	mcSetPosition[2](Axis:=M2.Axis, Position:=fFoilXPos, Mode:=FALSE, Execute:=TRUE);
+	mcSetPosition[3](Axis:=M3.Axis, Position:=fZonePlateXPos, Mode:=FALSE, Execute:=TRUE);
 	// Sample Paddle
-    mcSetPosition[4](Axis:=M4.Axis, Position:=fSamplePaddleXPos, Mode:=FALSE, Execute:=TRUE);
-	mcSetPosition[5](Axis:=M5.Axis, Position:=fSamplePaddleYPos, Mode:=FALSE, Execute:=TRUE);
-	mcSetPosition[6](Axis:=M6.Axis, Position:=fSamplePaddleZPos, Mode:=FALSE, Execute:=TRUE);
+    mcSetPosition[4](Axis:=M4.Axis, Position:=fZonePlateYPos, Mode:=FALSE, Execute:=TRUE);
+	mcSetPosition[5](Axis:=M5.Axis, Position:=fZonePlateZPos, Mode:=FALSE, Execute:=TRUE);
+	mcSetPosition[6](Axis:=M6.Axis, Position:=fYagXPos, Mode:=FALSE, Execute:=TRUE);
     if(mcSetPosition[1].Done and NOT mcSetPosition[1].Error) AND 
       (mcSetPosition[2].Done and NOT mcSetPosition[2].Error) AND
 	  (mcSetPosition[3].Done and NOT mcSetPosition[3].Error) AND
@@ -109,38 +132,42 @@ END_VAR]]></Declaration>
 	  mcSetPosition[6](Axis:=M6.Axis, Execute:=FALSE);
 	END_IF
 ELSE
+*)
 // Hardware Enable
 //Mrco
 // Gas Nozzle
 	M1.bHardwareEnable := TRUE;
 	M2.bHardwareEnable := TRUE;
 	M3.bHardwareEnable := TRUE;
-// Sample Paddle
 	M4.bHardwareEnable := TRUE;
 	M5.bHardwareEnable := TRUE;
 	M6.bHardwareEnable := TRUE;
-    
+	M7.bHardwareEnable := TRUE;
+	M8.bHardwareEnable := TRUE;
+	M9.bHardwareEnable := TRUE;
 // fbMotionStage
 // MRCO
 // Gas Nozzle
 	fbMotionStageM1(stMotionStage:=M1);
 	fbMotionStageM2(stMotionStage:=M2);
 	fbMotionStageM3(stMotionStage:=M3);
-// Sample Paddle	
 	fbMotionStageM4(stMotionStage:=M4);
 	fbMotionStageM5(stMotionStage:=M5);
 	fbMotionStageM6(stMotionStage:=M6);
-
+	fbMotionStageM7(stMotionStage:=M7);
+	fbMotionStageM8(stMotionStage:=M8);
+	fbMotionStageM9(stMotionStage:=M9);
+(*
 // Keep track of position
-// Gas Nozzle
-	fGasNozzleXPos := M1.Axis.NcToPlc.ActPos;
-	fGasNozzleYPos := M2.Axis.NcToPlc.ActPos;
-	fGasNozzleZPos := M3.Axis.NcToPlc.ActPos;
-// Sample Paddle
-	fSamplePaddleXPos := M4.Axis.NcToPlc.ActPos;
-	fSamplePaddleYPos := M5.Axis.NcToPlc.ActPos;
-	fSamplePaddleZPos := M6.Axis.NcToPlc.ActPos;	
 
+	fLensXPos := M1.Axis.NcToPlc.ActPos;
+	fFoilXPos := M2.Axis.NcToPlc.ActPos;
+	fZonePlateXPos := M3.Axis.NcToPlc.ActPos;
+	fZonePlateYPos := M4.Axis.NcToPlc.ActPos;
+	fZonePlateZPos := M5.Axis.NcToPlc.ActPos;
+	fYagXPos := M6.Axis.NcToPlc.ActPos;	
+
+// Persistent Memory
 	IF fbWriteDelay.Q THEN
 		fbWritePersistentData(NETID:='', PORT:=851, START:=TRUE, TMOUT:=T#1S);
 		fbWriteDelay(IN:=FALSE);
@@ -149,7 +176,7 @@ ELSE
 		fbWriteDelay(IN:=TRUE, PT:=T#0.5S);
 	END_IF
 END_IF;
-
+*)
 
     ]]></ST>
     </Implementation>

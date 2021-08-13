@@ -1324,13 +1324,17 @@ External Setpoint Generation:
 	<Axis Id="7" CreateSymbols="true" AxisType="1">
 		<Name>__FILENAME__</Name>
 		<AxisPara>
-			<Velo SlowManual="0.1" FastManual="1"/>
+			<Dynamic Acceleration="2" Deceleration="2"/>
+			<Velo SlowManual="0.1" FastManual="1" Maximum="1"/>
 			<OtherSettings AllowMotionCmdToSlave="true" PulseDistancePos="0.5" PulseDistanceNeg="0.5"/>
 			<ParameterChanged>25</ParameterChanged>
 			<ParameterChanged>8</ParameterChanged>
+			<ParameterChanged>39</ParameterChanged>
+			<ParameterChanged>257</ParameterChanged>
 			<ParameterChanged>24</ParameterChanged>
 			<ParameterChanged>18</ParameterChanged>
 			<ParameterChanged>9</ParameterChanged>
+			<ParameterChanged>258</ParameterChanged>
 		</AxisPara>
 		<Encoder Name="Enc" EncType="1">
 			<EncPara ScaleFactorNumerator="3.96875e-05">

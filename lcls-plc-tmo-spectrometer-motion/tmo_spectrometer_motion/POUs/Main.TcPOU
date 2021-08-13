@@ -4,7 +4,7 @@
     <Declaration><![CDATA[PROGRAM Main
 VAR
     // Motors
-    // MRCO Axes
+    // Spectrometer Axes
     {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[LensX-EL1084]^STM Status^Status^Digital input 1;
                               .bLimitBackwardEnable:=TIIB[LensX-EL1084]^STM Status^Status^Digital input 2'}
     {attribute 'pytmc' := '
@@ -19,7 +19,7 @@ VAR
         pv: TMO:SPEC:MMS:02
     '}
     M2 : DUT_MotionStage := (bPowerSelf:=TRUE,
-    nHomingMode := ENUM_EpicsHomeCmd.ABSOLUTE_SET); // Foil X
+    nHomingMode := ENUM_EpicsHomeCmd.ABSOLUTE_SET); // AL Foil X
 
     {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[ZonePlateX-EL7041]^STM Status^Status^Digital input 1;
                               .bLimitBackwardEnable:=TIIB[ZonePlateX-EL7041]^STM Status^Status^Digital input 2'}
@@ -133,30 +133,34 @@ END_VAR
 	END_IF
 ELSE
 *)
-// Hardware Enable
-//Mrco
-// Gas Nozzle
+// Hardware Enable and fbMotionStage
+//Lens X
 	M1.bHardwareEnable := TRUE;
-	M2.bHardwareEnable := TRUE;
-	M3.bHardwareEnable := TRUE;
-	M4.bHardwareEnable := TRUE;
-	M5.bHardwareEnable := TRUE;
-	M6.bHardwareEnable := TRUE;
-	M7.bHardwareEnable := TRUE;
-	M8.bHardwareEnable := TRUE;
-	M9.bHardwareEnable := TRUE;
-// fbMotionStage
-// MRCO
-// Gas Nozzle
 	fbMotionStageM1(stMotionStage:=M1);
+// AL Foil X
+	M2.bHardwareEnable := TRUE;
 	fbMotionStageM2(stMotionStage:=M2);
+//Zone Plate
+	M3.bHardwareEnable := TRUE;
 	fbMotionStageM3(stMotionStage:=M3);
+	
+	M4.bHardwareEnable := TRUE;
 	fbMotionStageM4(stMotionStage:=M4);
+
+	M5.bHardwareEnable := TRUE;
 	fbMotionStageM5(stMotionStage:=M5);
+// YAG
+	M6.bHardwareEnable := TRUE;
 	fbMotionStageM6(stMotionStage:=M6);
+	
+	M7.bHardwareEnable := TRUE;
 	fbMotionStageM7(stMotionStage:=M7);
+	
+	M8.bHardwareEnable := TRUE;
 	fbMotionStageM8(stMotionStage:=M8);
-	fbMotionStageM9(stMotionStage:=M9);
+	
+	M9.bHardwareEnable := TRUE;
+    fbMotionStageM9(stMotionStage:=M9);	
 (*
 // Keep track of position
 

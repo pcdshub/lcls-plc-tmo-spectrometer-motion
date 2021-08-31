@@ -5,12 +5,14 @@
 VAR
     // Motors
     // Spectrometer Axes
-    {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[LensX-EL1084]^STM Status^Status^Digital input 1;
-                              .bLimitBackwardEnable:=TIIB[LensX-EL1084]^STM Status^Status^Digital input 2'}
+    {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[LensX-EL1084]^Channel 1^Input;
+                              .bLimitBackwardEnable:=TIIB[LensX-EL1084]^Channel 2^Input'}
     {attribute 'pytmc' := '
         pv: TMO:SPEC:MMS:01
     '}
     M1 : DUT_MotionStage := (bPowerSelf:=TRUE,
+    nEnableMode:=ENUM_StageEnableMode.DURING_MOTION,
+//  nEnableMode:=ENUM_StageEnableMode.ALWAYS,
     nHomingMode := ENUM_EpicsHomeCmd.ABSOLUTE_SET); // Lens X
 
     {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[FoilX-EL7041]^STM Status^Status^Digital input 2;
@@ -19,6 +21,8 @@ VAR
         pv: TMO:SPEC:MMS:02
     '}
     M2 : DUT_MotionStage := (bPowerSelf:=TRUE,
+	nEnableMode:=ENUM_StageEnableMode.DURING_MOTION,
+//  nEnableMode:=ENUM_StageEnableMode.ALWAYS,
     nHomingMode := ENUM_EpicsHomeCmd.ABSOLUTE_SET); // AL Foil X
 
     {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[ZonePlateX-EL7041]^STM Status^Status^Digital input 1;
@@ -27,6 +31,8 @@ VAR
         pv: TMO:SPEC:MMS:03
     '}
     M3 : DUT_MotionStage := (bPowerSelf:=TRUE,
+	nEnableMode:=ENUM_StageEnableMode.DURING_MOTION,
+//  nEnableMode:=ENUM_StageEnableMode.ALWAYS,
     nHomingMode := ENUM_EpicsHomeCmd.ABSOLUTE_SET); // Zone Plate X
 
     {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[ZonePlateY-EL7041]^STM Status^Status^Digital input 1;
@@ -35,6 +41,8 @@ VAR
         pv: TMO:SPEC:MMS:04
     '}
     M4 : DUT_MotionStage := (bPowerSelf:=TRUE,
+	nEnableMode:=ENUM_StageEnableMode.DURING_MOTION,
+//  nEnableMode:=ENUM_StageEnableMode.ALWAYS,
     nHomingMode := ENUM_EpicsHomeCmd.ABSOLUTE_SET); // Zone Plate Y
 
     {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[ZonePlateZ-EL7041]^STM Status^Status^Digital input 1;
@@ -43,6 +51,8 @@ VAR
         pv: TMO:SPEC:MMS:05
     '}
     M5 : DUT_MotionStage := (bPowerSelf:=TRUE,
+	nEnableMode:=ENUM_StageEnableMode.DURING_MOTION,
+//  nEnableMode:=ENUM_StageEnableMode.ALWAYS,
     nHomingMode := ENUM_EpicsHomeCmd.ABSOLUTE_SET); // Zone Plate Z
 
     {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[YagX-EL7041]^STM Status^Status^Digital input 1;
@@ -51,6 +61,8 @@ VAR
         pv: TMO:SPEC:MMS:06
     '}
     M6 : DUT_MotionStage := (bPowerSelf:=TRUE,
+	nEnableMode:=ENUM_StageEnableMode.DURING_MOTION,
+//  nEnableMode:=ENUM_StageEnableMode.ALWAYS,
     nHomingMode := ENUM_EpicsHomeCmd.ABSOLUTE_SET); // Yag X
 	
     {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[YagY-EL7041]^STM Status^Status^Digital input 1;
@@ -59,6 +71,8 @@ VAR
         pv: TMO:SPEC:MMS:07
     '}
     M7 : DUT_MotionStage := (bPowerSelf:=TRUE,
+	nEnableMode:=ENUM_StageEnableMode.DURING_MOTION,
+//  nEnableMode:=ENUM_StageEnableMode.ALWAYS,
     nHomingMode := ENUM_EpicsHomeCmd.ABSOLUTE_SET); // Yag Y
 	
 	{attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[YagZ-EL7041]^STM Status^Status^Digital input 1;
@@ -67,6 +81,8 @@ VAR
         pv: TMO:SPEC:MMS:08
     '}
     M8 : DUT_MotionStage := (bPowerSelf:=TRUE,
+	nEnableMode:=ENUM_StageEnableMode.DURING_MOTION,
+//  nEnableMode:=ENUM_StageEnableMode.ALWAYS,
     nHomingMode := ENUM_EpicsHomeCmd.ABSOLUTE_SET); // Yag Z
 	
 	{attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[YagTheta-EL7041]^STM Status^Status^Digital input 1;
@@ -75,6 +91,8 @@ VAR
         pv: TMO:SPEC:MMS:09
     '}
     M9 : DUT_MotionStage := (bPowerSelf:=TRUE,
+	nEnableMode:=ENUM_StageEnableMode.DURING_MOTION,
+//  nEnableMode:=ENUM_StageEnableMode.ALWAYS,
     nHomingMode := ENUM_EpicsHomeCmd.ABSOLUTE_SET); // Yag Theta
 	
     // Spectrometer Axes

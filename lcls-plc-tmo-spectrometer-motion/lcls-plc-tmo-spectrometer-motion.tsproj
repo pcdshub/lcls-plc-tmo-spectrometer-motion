@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <TcSmProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4022.30">
-	<Project ProjectGUID="{0143B6F5-6C12-4354-BBD7-3B197CAE48D1}" Target64Bit="true" ShowHideConfigurations="#x306">
+	<Project ProjectGUID="{0143B6F5-6C12-4354-BBD7-3B197CAE48D1}" TargetNetId="172.21.132.142.1.1" Target64Bit="true" ShowHideConfigurations="#x306">
 		<System>
+			<Licenses>
+				<Target>
+					<ManualSelect>{3EBB9639-5FF3-42B6-8847-35C70DC013C8}</ManualSelect>
+					<ManualSelect>{E008E3C8-6BD9-491C-B673-DC45CC7AA4F1}</ManualSelect>
+				</Target>
+			</Licenses>
 			<Tasks>
 				<Task Id="3" Priority="20" CycleTime="100000" AmsPort="350" AdtTasks="true">
 					<Name>PlcTask</Name>
@@ -15,12 +21,10 @@
 			<Project File="tmo_spectrometer_motion.xti"/>
 		</Plc>
 		<Io>
-			<Device File="Device 1 (EtherCAT).xti" Id="2"/>
+			<Device File="Device 1 (EtherCAT).xti" Id="1"/>
 		</Io>
 	</Project>
 	<Mappings>
-		<MappingInfo Identifier="{08502001-0050-0304-0020-500850000403}" Id="#x02030010" Watchdog="00000000000000000000000000000000"/>
-		<MappingInfo Identifier="{05000010-2001-0850-1000-040300205008}" Id="#x02030040" Watchdog="14000000040000000400000004000000"/>
-		<MappingInfo Identifier="{00000000-0050-0304-1000-040350000403}" Id="#x02030050"/>
+		<MappingInfo Identifier="{00000000-0020-0304-1000-040320000403}" Id="#x02030010"/>
 	</Mappings>
 </TcSmProject>

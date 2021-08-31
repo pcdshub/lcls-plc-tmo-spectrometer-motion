@@ -5,8 +5,6 @@ VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{B1E792BE-AA5F-4E3C-8C82-674BF9C0715B}") = "lcls-plc-tmo-spectrometer-motion", "lcls-plc-tmo-spectrometer-motion\lcls-plc-tmo-spectrometer-motion.tsproj", "{0143B6F5-6C12-4354-BBD7-3B197CAE48D1}"
 EndProject
-Project("{FD9F1D59-E000-42F3-8744-88DE1BE93C06}") = "MRCO Measurement Project", "MRCO Measurement Project\MRCO Measurement Project.tcmproj", "{8299F710-589F-4EEE-8A33-B331667EE09B}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|TwinCAT CE7 (ARMV7) = Debug|TwinCAT CE7 (ARMV7)
@@ -35,14 +33,6 @@ Global
 		{0143B6F5-6C12-4354-BBD7-3B197CAE48D1}.Release|TwinCAT RT (x64).Build.0 = Release|TwinCAT RT (x64)
 		{0143B6F5-6C12-4354-BBD7-3B197CAE48D1}.Release|TwinCAT RT (x86).ActiveCfg = Release|TwinCAT RT (x86)
 		{0143B6F5-6C12-4354-BBD7-3B197CAE48D1}.Release|TwinCAT RT (x86).Build.0 = Release|TwinCAT RT (x86)
-		{8299F710-589F-4EEE-8A33-B331667EE09B}.Debug|TwinCAT CE7 (ARMV7).ActiveCfg = Debug|TwinCAT CE7 (ARMV7)
-		{8299F710-589F-4EEE-8A33-B331667EE09B}.Debug|TwinCAT OS (ARMT2).ActiveCfg = Debug|TwinCAT OS (ARMT2)
-		{8299F710-589F-4EEE-8A33-B331667EE09B}.Debug|TwinCAT RT (x64).ActiveCfg = Debug|TwinCAT RT (x64)
-		{8299F710-589F-4EEE-8A33-B331667EE09B}.Debug|TwinCAT RT (x86).ActiveCfg = Debug|TwinCAT RT (x86)
-		{8299F710-589F-4EEE-8A33-B331667EE09B}.Release|TwinCAT CE7 (ARMV7).ActiveCfg = Release|TwinCAT CE7 (ARMV7)
-		{8299F710-589F-4EEE-8A33-B331667EE09B}.Release|TwinCAT OS (ARMT2).ActiveCfg = Release|TwinCAT OS (ARMT2)
-		{8299F710-589F-4EEE-8A33-B331667EE09B}.Release|TwinCAT RT (x64).ActiveCfg = Release|TwinCAT RT (x64)
-		{8299F710-589F-4EEE-8A33-B331667EE09B}.Release|TwinCAT RT (x86).ActiveCfg = Release|TwinCAT RT (x86)
 		{BE140C0D-19B5-44FF-802A-E5742642FDE5}.Debug|TwinCAT CE7 (ARMV7).ActiveCfg = Debug|TwinCAT CE7 (ARMV7)
 		{BE140C0D-19B5-44FF-802A-E5742642FDE5}.Debug|TwinCAT CE7 (ARMV7).Build.0 = Debug|TwinCAT CE7 (ARMV7)
 		{BE140C0D-19B5-44FF-802A-E5742642FDE5}.Debug|TwinCAT OS (ARMT2).ActiveCfg = Debug|TwinCAT OS (ARMT2)

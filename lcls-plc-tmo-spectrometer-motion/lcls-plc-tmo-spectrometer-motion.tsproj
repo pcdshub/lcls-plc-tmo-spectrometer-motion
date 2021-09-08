@@ -25,6 +25,7 @@
 		</Io>
 	</Project>
 	<Mappings>
+		<MappingInfo Identifier="{05000010-2001-0850-1000-040300205008}" Id="#x02030040" Watchdog="14000000040000000400000004000000"/>
 		<MappingInfo Identifier="{00000000-0020-0304-1000-040320000403}" Id="#x02030010"/>
 	</Mappings>
 </TcSmProject>

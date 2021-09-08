@@ -7,38 +7,41 @@
 		<Name>__FILENAME__</Name>
 		<ImageId>1000</ImageId>
 		<EtherCAT SlaveType="1" PdiType="#x0d00" CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x044c2c52" RevisionNo="#x00120000" PortPhys="305" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EK1100 EtherCAT Coupler (2A E-Bus)" Desc="EK1100"/>
-		<Box File="LensX-EL7031.xti" Id="7">
+		<Box File="FoilX-EL7041.xti" Id="7">
 			<EtherCAT PortABoxInfo="#x01000006"/>
 		</Box>
-		<Box File="LensX-EL1084.xti" Id="8">
+		<Box File="ZonePlateX-EL7041.xti" Id="8">
 			<EtherCAT PortABoxInfo="#x01000007"/>
 		</Box>
-		<Box File="FoilX-EL7041.xti" Id="9">
+		<Box File="ZonePlateY-EL7041.xti" Id="9">
 			<EtherCAT PortABoxInfo="#x01000008"/>
 		</Box>
-		<Box File="ZonePlateX-EL7041.xti" Id="10">
+		<Box File="ZonePlateZ-EL7041.xti" Id="10">
 			<EtherCAT PortABoxInfo="#x01000009"/>
 		</Box>
-		<Box File="ZonePlateY-EL7041.xti" Id="11">
+		<Box File="YagX-EL7041.xti" Id="11">
 			<EtherCAT PortABoxInfo="#x0100000a"/>
 		</Box>
-		<Box File="ZonePlateZ-EL7041.xti" Id="12">
+		<Box File="YagY-EL7041.xti" Id="12">
 			<EtherCAT PortABoxInfo="#x0100000b"/>
 		</Box>
-		<Box File="YagX-EL7041.xti" Id="13">
+		<Box File="YagZ-EL7041.xti" Id="13">
 			<EtherCAT PortABoxInfo="#x0100000c"/>
 		</Box>
-		<Box File="YagY-EL7041.xti" Id="14">
+		<Box File="YagTheta-EL7041.xti" Id="14">
 			<EtherCAT PortABoxInfo="#x0100000d"/>
 		</Box>
-		<Box File="YagZ-EL7041.xti" Id="15">
+		<Box File="LensX-EL7031.xti" Id="15">
 			<EtherCAT PortABoxInfo="#x0100000e"/>
 		</Box>
-		<Box File="YagTheta-EL7041.xti" Id="16">
+		<Box File="Term 16 (EL9505).xti" Id="16">
 			<EtherCAT PortABoxInfo="#x0100000f"/>
 		</Box>
-		<Box File="E11_EL9011.xti" Id="17">
+		<Box File="LensX-EL1124.xti" Id="17">
 			<EtherCAT PortABoxInfo="#x01000010"/>
+		</Box>
+		<Box File="Term 18 (EL9011).xti" Id="18">
+			<EtherCAT PortABoxInfo="#x01000011"/>
 		</Box>
 	</Box>
 </TcSmItem>

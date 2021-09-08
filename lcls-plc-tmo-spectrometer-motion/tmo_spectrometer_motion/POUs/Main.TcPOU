@@ -5,8 +5,8 @@
 VAR
     // Motors
     // Spectrometer Axes
-    {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[LensX-EL1084]^Channel 1^Input;
-                              .bLimitBackwardEnable:=TIIB[LensX-EL1084]^Channel 2^Input'}
+    {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[LensX-EL1124]^Channel 1^Input;
+                              .bLimitBackwardEnable:=TIIB[LensX-EL1124]^Channel 2^Input'}
     {attribute 'pytmc' := '
         pv: TMO:SPEC:MMS:01
     '}
@@ -15,8 +15,8 @@ VAR
 //  nEnableMode:=ENUM_StageEnableMode.ALWAYS,
     nHomingMode := ENUM_EpicsHomeCmd.ABSOLUTE_SET); // Lens X
 
-    {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[FoilX-EL7041]^STM Status^Status^Digital input 2;
-                              .bLimitBackwardEnable:=TIIB[FoilX-EL7041]^STM Status^Status^Digital input 1'}
+    {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[FoilX-EL7041]^STM Status^Status^Digital input 1;
+                              .bLimitBackwardEnable:=TIIB[FoilX-EL7041]^STM Status^Status^Digital input 2'}
     {attribute 'pytmc' := '
         pv: TMO:SPEC:MMS:02
     '}
@@ -25,8 +25,8 @@ VAR
 //  nEnableMode:=ENUM_StageEnableMode.ALWAYS,
     nHomingMode := ENUM_EpicsHomeCmd.ABSOLUTE_SET); // AL Foil X
 
-    {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[ZonePlateX-EL7041]^STM Status^Status^Digital input 1;
-                              .bLimitBackwardEnable:=TIIB[ZonePlateX-EL7041]^STM Status^Status^Digital input 2'}
+    {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[ZonePlateX-EL7041]^STM Status^Status^Digital input 2;
+                              .bLimitBackwardEnable:=TIIB[ZonePlateX-EL7041]^STM Status^Status^Digital input 1'}
     {attribute 'pytmc' := '
         pv: TMO:SPEC:MMS:03
     '}
@@ -35,8 +35,8 @@ VAR
 //  nEnableMode:=ENUM_StageEnableMode.ALWAYS,
     nHomingMode := ENUM_EpicsHomeCmd.ABSOLUTE_SET); // Zone Plate X
 
-    {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[ZonePlateY-EL7041]^STM Status^Status^Digital input 1;
-                              .bLimitBackwardEnable:=TIIB[ZonePlateY-EL7041]^STM Status^Status^Digital input 2'}
+    {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[ZonePlateY-EL7041]^STM Status^Status^Digital input 2;
+                              .bLimitBackwardEnable:=TIIB[ZonePlateY-EL7041]^STM Status^Status^Digital input 1'}
     {attribute 'pytmc' := '
         pv: TMO:SPEC:MMS:04
     '}
@@ -55,8 +55,8 @@ VAR
 //  nEnableMode:=ENUM_StageEnableMode.ALWAYS,
     nHomingMode := ENUM_EpicsHomeCmd.ABSOLUTE_SET); // Zone Plate Z
 
-    {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[YagX-EL7041]^STM Status^Status^Digital input 1;
-                              .bLimitBackwardEnable:=TIIB[YagX-EL7041]^STM Status^Status^Digital input 2'}
+    {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[YagX-EL7041]^STM Status^Status^Digital input 2;
+                              .bLimitBackwardEnable:=TIIB[YagX-EL7041]^STM Status^Status^Digital input 1'}
     {attribute 'pytmc' := '
         pv: TMO:SPEC:MMS:06
     '}
@@ -75,8 +75,8 @@ VAR
 //  nEnableMode:=ENUM_StageEnableMode.ALWAYS,
     nHomingMode := ENUM_EpicsHomeCmd.ABSOLUTE_SET); // Yag Y
 	
-	{attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[YagZ-EL7041]^STM Status^Status^Digital input 1;
-                              .bLimitBackwardEnable:=TIIB[YagZ-EL7041]^STM Status^Status^Digital input 2'}
+	{attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[YagZ-EL7041]^STM Status^Status^Digital input 2;
+                              .bLimitBackwardEnable:=TIIB[YagZ-EL7041]^STM Status^Status^Digital input 1'}
     {attribute 'pytmc' := '
         pv: TMO:SPEC:MMS:08
     '}

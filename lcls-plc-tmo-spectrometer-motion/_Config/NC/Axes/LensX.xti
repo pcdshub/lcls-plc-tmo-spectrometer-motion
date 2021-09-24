@@ -1331,7 +1331,7 @@ External Setpoint Generation:
 		<Encoder Name="Enc" EncType="4">
 			<EncPara ScaleFactorNumerator="3.90625e-05" MaxCount="#x0000ffff">
 				<Inc RefSoftSyncMask="#x0000ffff"/>
-				<ParameterChanged>35</ParameterChanged>
+				<ParameterChanged>8</ParameterChanged>
 			</EncPara>
 			<Vars VarGrpType="1">
 				<Name>Inputs</Name>
@@ -1402,6 +1402,7 @@ External Setpoint Generation:
 			<DrvPara>
 				<Analog VeloReferenz="4.5" ScaleFactorActTorque="0.1"/>
 				<TimeComp TaskDelayCycles="1"/>
+				<ParameterChanged>6</ParameterChanged>
 			</DrvPara>
 			<Vars VarGrpType="1">
 				<Name>Inputs</Name>

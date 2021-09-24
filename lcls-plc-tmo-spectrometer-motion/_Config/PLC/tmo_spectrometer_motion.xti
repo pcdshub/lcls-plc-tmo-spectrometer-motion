@@ -911,6 +911,14 @@ External Setpoint Generation:
 					<Type GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</Type>
 				</Var>
 				<Var>
+					<Name>IO.bMyInput1</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>IO.bMyInput2</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
 					<Name>Main.M1.Axis.NcToPlc</Name>
 					<Type GUID="{6A65C767-34E5-42BF-AD87-E1A503EAC7BE}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
 					<SubVar>
@@ -2391,6 +2399,13 @@ External Setpoint Generation:
 					<InOut>7</InOut>
 				</Var>
 			</Vars>
+			<UnrestoredVarLinks ImportTime="2021-09-22T16:05:19">
+				<OwnerA Name="InputDst" Prefix="TIPC^tmo_spectrometer_motion^tmo_spectrometer_motion Instance" Type="1">
+					<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 19 (EK1200)^Term 23 (EK1122)^Term 24 (EK1100)^LensX-EL1004">
+						<Link VarA="IO.bMyInput" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 1^Input" AutoLink="true" Size="1" RestoreInfo="ANotFound"/>
+					</OwnerB>
+				</OwnerA>
+			</UnrestoredVarLinks>
 			<TaskPouOids>
 				<TaskPouOid Prio="20" OTCID="#x08502001"/>
 			</TaskPouOids>
@@ -2402,9 +2417,9 @@ External Setpoint Generation:
 				<Link VarA="PlcTask Inputs^Main.M2.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 2" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^Main.M2.bLimitForwardEnable" VarB="STM Status^Status^Digital input 1" AutoLink="true"/>
 			</OwnerB>
-			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 19 (EK1200)^Term 23 (EK1122)^Term 24 (EK1100)^LensX-EL1084">
-				<Link VarA="PlcTask Inputs^Main.M1.bLimitBackwardEnable" VarB="Channel 2^Input" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^Main.M1.bLimitForwardEnable" VarB="Channel 1^Input" AutoLink="true"/>
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 19 (EK1200)^Term 23 (EK1122)^Term 24 (EK1100)^LensX_EL1004">
+				<Link VarA="PlcTask Inputs^IO.bMyInput1" VarB="Channel 1^Input"/>
+				<Link VarA="PlcTask Inputs^IO.bMyInput2" VarB="Channel 2^Input"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 19 (EK1200)^Term 23 (EK1122)^Term 24 (EK1100)^YagTheta-EL7041">
 				<Link VarA="PlcTask Inputs^Main.M9.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 2" AutoLink="true"/>

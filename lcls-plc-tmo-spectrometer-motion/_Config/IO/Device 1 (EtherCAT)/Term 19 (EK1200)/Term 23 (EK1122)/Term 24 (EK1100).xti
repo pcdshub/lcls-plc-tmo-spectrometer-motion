@@ -10,11 +10,11 @@
 		<Box File="EL7031-LensX.xti" Id="25">
 			<EtherCAT PortABoxInfo="#x01000018"/>
 		</Box>
-		<Box File="LensX-EL1084.xti" Id="26">
+		<Box File="LensX_EL1004.xti" Id="8">
 			<EtherCAT PortABoxInfo="#x01000019"/>
 		</Box>
 		<Box File="FoilX-EL7041.xti" Id="27">
-			<EtherCAT PortABoxInfo="#x0100001a"/>
+			<EtherCAT PortABoxInfo="#x01000008"/>
 		</Box>
 		<Box File="ZonePlateX-EL7041.xti" Id="28">
 			<EtherCAT PortABoxInfo="#x0100001b"/>

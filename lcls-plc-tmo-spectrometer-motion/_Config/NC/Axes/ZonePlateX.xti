@@ -1399,7 +1399,7 @@ External Setpoint Generation:
 		</Encoder>
 		<Drive Name="Drive" DrvType="24">
 			<DrvPara Inverse="true">
-				<Analog VeloReferenz="6" ScaleFactorActTorque="0.1"/>
+				<Analog VeloReferenz="13.2" ScaleFactorActTorque="0.1"/>
 				<TimeComp TaskDelayCycles="1"/>
 			</DrvPara>
 			<Vars VarGrpType="1">

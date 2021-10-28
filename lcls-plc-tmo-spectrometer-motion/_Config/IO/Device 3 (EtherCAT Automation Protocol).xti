@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TcSmItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmItem" TcSmVersion="1.0" TcVersion="3.1.4022.30" ClassName="CDevEthernetProtocolNvDef" SubType="112">
+	<Device Id="3" DevType="112" AmsPort="28675" AmsNetId="172.21.132.142.4.1">
+		<Name>__FILENAME__</Name>
+		<AddressInfo>
+			<Pnp>
+				<DeviceDesc>PCI\TcI8254x1</DeviceDesc>
+				<DeviceName>PCI\TCI8254X1</DeviceName>
+				<DeviceData>0001055d995a</DeviceData>
+			</Pnp>
+		</AddressInfo>
+		<Image Id="5" AddrType="1" ImageType="1">
+			<Name>Image</Name>
+		</Image>
+		<Ethernet DeviceDesc="PCI\TcI8254x1"/>
+		<Eap EapDeviceGuid="{E747A492-0539-4A45-A804-19013E0A82A0}"/>
+	</Device>
+</TcSmItem>

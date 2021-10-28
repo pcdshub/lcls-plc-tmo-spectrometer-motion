@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+  <GVL Name="IO" Id="{08486c7e-b617-4509-b0ee-e1c845fda792}">
+    <Declaration><![CDATA[{attribute 'qualified_only'}
+VAR_GLOBAL
+	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 19 (EK1200)^Term 23 (EK1122)^Term 24 (EK1100)^LensX-EL1004^Channel 1^Input'}
+	bMyInput1 AT %I* : BOOL;
+
+	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 19 (EK1200)^Term 23 (EK1122)^Term 24 (EK1100)^LensX-EL1004^Channel 2^Input'}
+	bMyInput2 AT %I* : BOOL;
+
+END_VAR
+]]></Declaration>
+  </GVL>
+</TcPlcObject>

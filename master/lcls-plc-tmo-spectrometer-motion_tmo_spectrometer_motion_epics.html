@@ -1,0 +1,5567 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data Types &mdash; pcdshub/lcls-plc-tmo-spectrometer-motion  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+        <script src="_static/docs-versions-menu.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="DUTs" href="lcls-plc-tmo-spectrometer-motion_tmo_spectrometer_motion_source.html" />
+    <link rel="prev" title="Settings" href="lcls-plc-tmo-spectrometer-motion_tmo_spectrometer_motion_summary.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            pcdshub/lcls-plc-tmo-spectrometer-motion
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">lcls-plc-tmo-spectrometer-motion</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="lcls-plc-tmo-spectrometer-motion_pragmas.html">Pragmas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lcls-plc-tmo-spectrometer-motion_nc.html">NC Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lcls-plc-tmo-spectrometer-motion_boxes.html">Boxes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lcls-plc-tmo-spectrometer-motion_links.html">Links</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">tmo_spectrometer_motion</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="lcls-plc-tmo-spectrometer-motion_tmo_spectrometer_motion_summary.html">Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lcls-plc-tmo-spectrometer-motion_tmo_spectrometer_motion_summary.html#pragmas">Pragmas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lcls-plc-tmo-spectrometer-motion_tmo_spectrometer_motion_summary.html#libraries">Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lcls-plc-tmo-spectrometer-motion_tmo_spectrometer_motion_summary.html#symbols">Symbols</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Data Types</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#lcls-twincat-motion-dut-motionstage">lcls_twincat_motion.DUT_MotionStage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#lcls-twincat-motion-dut-positionstate">lcls_twincat_motion.DUT_PositionState</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#lcls-twincat-motion-lcls-general-fb-logmessage">lcls_twincat_motion.LCLS_General.FB_LogMessage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#lcls-twincat-motion-pmps-st-beamparams">lcls_twincat_motion.PMPS.ST_BeamParams</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#lcls-twincat-motion-pmps-st-pmps-aperture">lcls_twincat_motion.PMPS.ST_PMPS_Aperture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#st-pmps-aperture-io">ST_PMPS_Aperture_IO</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#database-records">Database Records</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lcls-plc-tmo-spectrometer-motion_tmo_spectrometer_motion_source.html">DUTs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lcls-plc-tmo-spectrometer-motion_tmo_spectrometer_motion_source.html#gvls">GVLs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lcls-plc-tmo-spectrometer-motion_tmo_spectrometer_motion_source.html#pous">POUs</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pcdshub/lcls-plc-tmo-spectrometer-motion</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Data Types</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/lcls-plc-tmo-spectrometer-motion_tmo_spectrometer_motion_epics.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="data-types">
+<h1>Data Types<a class="headerlink" href="#data-types" title="Permalink to this heading"></a></h1>
+<section id="lcls-twincat-motion-dut-motionstage">
+<h2>lcls_twincat_motion.DUT_MotionStage<a class="headerlink" href="#lcls-twincat-motion-dut-motionstage" title="Permalink to this heading"></a></h2>
+<table class="docutils align-center">
+<thead>
+<tr class="row-odd"><th class="head"><p>Record</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Pragma</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>$(PREFIX):PLC:bAllBackwardEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Summary of axis permission to move backward</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):PLC:bAllEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Summary of axis permission to have power</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):PLC:bAllForwardEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Summary of axis permission to move forward</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):PLC:bBrakeRelease_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if brake released</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):PLC:bBusy_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if in the middle of a command</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):PLC:bDone_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if command finished successfully</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):PLC:bEnable</p></td>
+<td><p>bo</p></td>
+<td><p>Used internally to request enables</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):PLC:bEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Used internally to request enables</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):PLC:bEnableDone_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if done enabling</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):PLC:bError_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if we</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):PLC:bExecute</p></td>
+<td><p>bo</p></td>
+<td><p>Used internally and by the IOC to start or stop</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):PLC:bExecute_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Used internally and by the IOC to start or stop</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):PLC:bGantryAxis_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if gantry EPS active</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):PLC:bGantryBackwardEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if gantry ok to move backward</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):PLC:bGantryForwardEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if gantry ok to move forward</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):PLC:bHardwareEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if STO not hit</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):PLC:bHome_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if at homing switch</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):PLC:bHomeCmd</p></td>
+<td><p>bo</p></td>
+<td><p>Start the homing routine</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):PLC:bHomeCmd_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Start the homing routine</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):PLC:bHomed_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if the motor has been homed</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):PLC:bLimitBackwardEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>FALSE if reverse limit hit</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):PLC:bLimitForwardEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>FALSE if forward limit hit</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):PLC:bMoveCmd</p></td>
+<td><p>bo</p></td>
+<td><p>Start a move</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):PLC:bMoveCmd_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Start a move</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):PLC:bPowerSelf_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>FALSE if axis is in PMPS</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):PLC:bReset</p></td>
+<td><p>bo</p></td>
+<td><p>Used internally to reset errors</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):PLC:bReset_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Used internally to reset errors</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):PLC:bSafetyReady_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if safe to start a move</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):PLC:bUserEnable</p></td>
+<td><p>bo</p></td>
+<td><p>Used to disable power entirely for an axis</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM ENABLE</div>
+<div class="line">field: ZNAM DISABLE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):PLC:bUserEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Used to disable power entirely for an axis</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM ENABLE</div>
+<div class="line">field: ZNAM DISABLE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):PLC:fAcceleration</p></td>
+<td><p>ao</p></td>
+<td><p>Used internally and by the IOC to set acceleration</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):PLC:fAcceleration_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>Used internally and by the IOC to set acceleration</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):PLC:fDeceleration</p></td>
+<td><p>ao</p></td>
+<td><p>Used internally and by the IOC to set deceleration</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):PLC:fDeceleration_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>Used internally and by the IOC to set deceleration</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):PLC:fHomePosition</p></td>
+<td><p>ao</p></td>
+<td><p>Used internally and by the IOC to pick home position</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):PLC:fHomePosition_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>Used internally and by the IOC to pick home position</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):PLC:fPosDiff_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>Position lag difference</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):PLC:fPosition</p></td>
+<td><p>ao</p></td>
+<td><p>Used internally and by the IOC as the set position</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):PLC:fPosition_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>Used internally and by the IOC as the set position</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):PLC:fVelocity</p></td>
+<td><p>ao</p></td>
+<td><p>Used internally and by the IOC to set velocity</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):PLC:fVelocity_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>Used internally and by the IOC to set velocity</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):PLC:nBrakeMode_RBV</p></td>
+<td><p>mbbi</p></td>
+<td><p>Describes when the brake will be released</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):PLC:nCmdData</p></td>
+<td><p>longout</p></td>
+<td><p>Used internally and by the IOC to pass extra args</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):PLC:nCmdData_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>Used internally and by the IOC to pass extra args</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):PLC:nCommand</p></td>
+<td><p>longout</p></td>
+<td><p>Used internally and by the IOC to pick move type</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):PLC:nCommand_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>Used internally and by the IOC to pick move type</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):PLC:nEnableMode_RBV</p></td>
+<td><p>mbbi</p></td>
+<td><p>Describes when the axis will automatically get power</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):PLC:nEncoderCount_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>Count from encoder hardware</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):PLC:nErrorId_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>Error code if nonzero</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):PLC:nHomingMode_RBV</p></td>
+<td><p>mbbi</p></td>
+<td><p>Describes our homing strategy</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):PLC:nMotionAxisID_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>Unique ID assigned to each axis in the NC</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):PLC:sErrorMessage_RBV</p></td>
+<td><p>waveform</p></td>
+<td><p>Message to identify the error state</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):PLC:sName_RBV</p></td>
+<td><p>waveform</p></td>
+<td><p>PLC program name</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="lcls-twincat-motion-dut-positionstate">
+<h2>lcls_twincat_motion.DUT_PositionState<a class="headerlink" href="#lcls-twincat-motion-dut-positionstate" title="Permalink to this heading"></a></h2>
+<table class="docutils align-center">
+<thead>
+<tr class="row-odd"><th class="head"><p>Record</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Pragma</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>$(PREFIX):ACCL</p></td>
+<td><p>ao</p></td>
+<td><p>Acceleration to use for moves to this state</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):ACCL_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>Acceleration to use for moves to this state</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):DCCL</p></td>
+<td><p>ao</p></td>
+<td><p>Deceleration to use for moves to this state</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):DCCL_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>Deceleration to use for moves to this state</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):DELTA</p></td>
+<td><p>ao</p></td>
+<td><p>Max deviation from position at this state</p></td>
+<td><div class="line-block">
+<div class="line">field: DRVL 0.0</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):DELTA_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>Max deviation from position at this state</p></td>
+<td><div class="line-block">
+<div class="line">field: DRVL 0.0</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):ENCODER_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>Encoder count associated with this state</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):LOCKED_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if state is immutable</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):MOVE_OK_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if the move would be safe</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):NAME_RBV</p></td>
+<td><p>waveform</p></td>
+<td><p>Name of this position state</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):SETPOINT</p></td>
+<td><p>ao</p></td>
+<td><p>Axis position associated with this state</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):SETPOINT_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>Axis position associated with this state</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):VALID_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if this is a real state</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):VELO</p></td>
+<td><p>ao</p></td>
+<td><p>Speed at which to move to this state</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):VELO_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>Speed at which to move to this state</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="lcls-twincat-motion-lcls-general-fb-logmessage">
+<h2>lcls_twincat_motion.LCLS_General.FB_LogMessage<a class="headerlink" href="#lcls-twincat-motion-lcls-general-fb-logmessage" title="Permalink to this heading"></a></h2>
+<table class="docutils align-center">
+<thead>
+<tr class="row-odd"><th class="head"><p>Record</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Pragma</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>$(PREFIX):Reset</p></td>
+<td><p>bo</p></td>
+<td><p>Rising-edge reset of trip</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):Reset_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Rising-edge reset of trip</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):Tripped_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Log message FB tripped</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="lcls-twincat-motion-pmps-st-beamparams">
+<h2>lcls_twincat_motion.PMPS.ST_BeamParams<a class="headerlink" href="#lcls-twincat-motion-pmps-st-beamparams" title="Permalink to this heading"></a></h2>
+<table class="docutils align-center">
+<thead>
+<tr class="row-odd"><th class="head"><p>Record</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Pragma</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>$(PREFIX):Cohort_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>Cohort inc on each arb cycle</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):PhotonEnergyRanges_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>$(SYMBOL).neVRange</p></td>
+<td><div class="line-block">
+<div class="line">field: EGU eV</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):Rate_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>$(SYMBOL).nRate</p></td>
+<td><div class="line-block">
+<div class="line">field: EGU Hz</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):Transmission_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>$(SYMBOL).nTran</p></td>
+<td><div class="line-block">
+<div class="line">field: HOPR 1</div>
+<div class="line">field: LOPR 0</div>
+<div class="line">field: PREC 2</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):Valid_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).xValid</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):Veto_RBV</p></td>
+<td><p>waveform</p></td>
+<td><p>$(SYMBOL).aVetoDevices</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="lcls-twincat-motion-pmps-st-pmps-aperture">
+<h2>lcls_twincat_motion.PMPS.ST_PMPS_Aperture<a class="headerlink" href="#lcls-twincat-motion-pmps-st-pmps-aperture" title="Permalink to this heading"></a></h2>
+<table class="docutils align-center">
+<thead>
+<tr class="row-odd"><th class="head"><p>Record</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Pragma</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>$(PREFIX):Height_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>$(SYMBOL).Height</p></td>
+<td><div class="line-block">
+<div class="line">field: EGU mm</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):OK_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).xOK</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):Width_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>$(SYMBOL).Width</p></td>
+<td><div class="line-block">
+<div class="line">field: EGU mm</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="st-pmps-aperture-io">
+<h2>ST_PMPS_Aperture_IO<a class="headerlink" href="#st-pmps-aperture-io" title="Permalink to this heading"></a></h2>
+<table class="docutils align-center">
+<thead>
+<tr class="row-odd"><th class="head"><p>Record</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Pragma</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>$(PREFIX):Height_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>$(SYMBOL).Height</p></td>
+<td><div class="line-block">
+<div class="line">field: EGU mm</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):OK_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).xOK</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):Width_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>$(SYMBOL).Width</p></td>
+<td><div class="line-block">
+<div class="line">field: EGU mm</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="database-records">
+<h1>Database Records<a class="headerlink" href="#database-records" title="Permalink to this heading"></a></h1>
+<table class="docutils align-center">
+<thead>
+<tr class="row-odd"><th class="head"><p>Record</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Pragma</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>$(PREFIX)LCLSGeneral:GlobalLogTrickleTrip_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Tripped by overall log count</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX)LCLSGeneral:LogHost_RBV</p></td>
+<td><p>waveform</p></td>
+<td><p>The log host IP address</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX)LCLSGeneral:LogHost</p></td>
+<td><p>waveform</p></td>
+<td><p>The log host IP address</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX)LCLSGeneral:LogPort_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>The log host UDP port</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX)LCLSGeneral:LogPort</p></td>
+<td><p>longout</p></td>
+<td><p>The log host UDP port</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX)LCLSGeneral:LogMessageCount_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>Total log messages on the last cycle</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:01:PLC:bAllBackwardEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Summary of axis permission to move backward</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:01:PLC:bAllEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Summary of axis permission to have power</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:01:PLC:bAllForwardEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Summary of axis permission to move forward</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:01:PLC:bBrakeRelease_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if brake released</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:01:PLC:bBusy_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if in the middle of a command</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:01:PLC:bDone_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if command finished successfully</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:01:PLC:bEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Used internally to request enables</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:01:PLC:bEnable</p></td>
+<td><p>bo</p></td>
+<td><p>Used internally to request enables</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:01:PLC:bEnableDone_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if done enabling</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:01:PLC:bError_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if we</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:01:PLC:bExecute_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Used internally and by the IOC to start or stop</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:01:PLC:bExecute</p></td>
+<td><p>bo</p></td>
+<td><p>Used internally and by the IOC to start or stop</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:01:PLC:bGantryAxis_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if gantry EPS active</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:01:PLC:bGantryBackwardEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if gantry ok to move backward</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:01:PLC:bGantryForwardEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if gantry ok to move forward</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:01:PLC:bHardwareEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if STO not hit</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:01:PLC:bHome_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if at homing switch</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:01:PLC:bHomeCmd_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Start the homing routine</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:01:PLC:bHomeCmd</p></td>
+<td><p>bo</p></td>
+<td><p>Start the homing routine</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:01:PLC:bHomed_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if the motor has been homed</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:01:PLC:bLimitBackwardEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>FALSE if reverse limit hit</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:01:PLC:bLimitForwardEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>FALSE if forward limit hit</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:01:PLC:bMoveCmd_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Start a move</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:01:PLC:bMoveCmd</p></td>
+<td><p>bo</p></td>
+<td><p>Start a move</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:01:PLC:bPowerSelf_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>FALSE if axis is in PMPS</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:01:PLC:bReset_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Used internally to reset errors</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:01:PLC:bReset</p></td>
+<td><p>bo</p></td>
+<td><p>Used internally to reset errors</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:01:PLC:bSafetyReady_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if safe to start a move</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:01:PLC:bUserEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Used to disable power entirely for an axis</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM ENABLE</div>
+<div class="line">field: ZNAM DISABLE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:01:PLC:bUserEnable</p></td>
+<td><p>bo</p></td>
+<td><p>Used to disable power entirely for an axis</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM ENABLE</div>
+<div class="line">field: ZNAM DISABLE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:01:PLC:fAcceleration_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>Used internally and by the IOC to set acceleration</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:01:PLC:fAcceleration</p></td>
+<td><p>ao</p></td>
+<td><p>Used internally and by the IOC to set acceleration</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:01:PLC:fDeceleration_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>Used internally and by the IOC to set deceleration</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:01:PLC:fDeceleration</p></td>
+<td><p>ao</p></td>
+<td><p>Used internally and by the IOC to set deceleration</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:01:PLC:fHomePosition_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>Used internally and by the IOC to pick home position</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:01:PLC:fHomePosition</p></td>
+<td><p>ao</p></td>
+<td><p>Used internally and by the IOC to pick home position</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:01:PLC:fPosDiff_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>Position lag difference</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:01:PLC:fPosition_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>Used internally and by the IOC as the set position</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:01:PLC:fPosition</p></td>
+<td><p>ao</p></td>
+<td><p>Used internally and by the IOC as the set position</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:01:PLC:fVelocity_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>Used internally and by the IOC to set velocity</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:01:PLC:fVelocity</p></td>
+<td><p>ao</p></td>
+<td><p>Used internally and by the IOC to set velocity</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:01:PLC:nBrakeMode_RBV</p></td>
+<td><p>mbbi</p></td>
+<td><p>Describes when the brake will be released</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:01:PLC:nCmdData_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>Used internally and by the IOC to pass extra args</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:01:PLC:nCmdData</p></td>
+<td><p>longout</p></td>
+<td><p>Used internally and by the IOC to pass extra args</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:01:PLC:nCommand_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>Used internally and by the IOC to pick move type</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:01:PLC:nCommand</p></td>
+<td><p>longout</p></td>
+<td><p>Used internally and by the IOC to pick move type</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:01:PLC:nEnableMode_RBV</p></td>
+<td><p>mbbi</p></td>
+<td><p>Describes when the axis will automatically get power</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:01:PLC:nEncoderCount_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>Count from encoder hardware</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:01:PLC:nErrorId_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>Error code if nonzero</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:01:PLC:nHomingMode_RBV</p></td>
+<td><p>mbbi</p></td>
+<td><p>Describes our homing strategy</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:01:PLC:nMotionAxisID_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>Unique ID assigned to each axis in the NC</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:01:PLC:sErrorMessage_RBV</p></td>
+<td><p>waveform</p></td>
+<td><p>Message to identify the error state</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:01:PLC:sName_RBV</p></td>
+<td><p>waveform</p></td>
+<td><p>PLC program name</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:02:PLC:bAllBackwardEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Summary of axis permission to move backward</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:02:PLC:bAllEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Summary of axis permission to have power</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:02:PLC:bAllForwardEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Summary of axis permission to move forward</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:02:PLC:bBrakeRelease_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if brake released</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:02:PLC:bBusy_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if in the middle of a command</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:02:PLC:bDone_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if command finished successfully</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:02:PLC:bEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Used internally to request enables</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:02:PLC:bEnable</p></td>
+<td><p>bo</p></td>
+<td><p>Used internally to request enables</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:02:PLC:bEnableDone_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if done enabling</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:02:PLC:bError_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if we</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:02:PLC:bExecute_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Used internally and by the IOC to start or stop</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:02:PLC:bExecute</p></td>
+<td><p>bo</p></td>
+<td><p>Used internally and by the IOC to start or stop</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:02:PLC:bGantryAxis_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if gantry EPS active</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:02:PLC:bGantryBackwardEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if gantry ok to move backward</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:02:PLC:bGantryForwardEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if gantry ok to move forward</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:02:PLC:bHardwareEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if STO not hit</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:02:PLC:bHome_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if at homing switch</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:02:PLC:bHomeCmd_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Start the homing routine</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:02:PLC:bHomeCmd</p></td>
+<td><p>bo</p></td>
+<td><p>Start the homing routine</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:02:PLC:bHomed_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if the motor has been homed</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:02:PLC:bLimitBackwardEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>FALSE if reverse limit hit</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:02:PLC:bLimitForwardEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>FALSE if forward limit hit</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:02:PLC:bMoveCmd_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Start a move</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:02:PLC:bMoveCmd</p></td>
+<td><p>bo</p></td>
+<td><p>Start a move</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:02:PLC:bPowerSelf_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>FALSE if axis is in PMPS</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:02:PLC:bReset_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Used internally to reset errors</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:02:PLC:bReset</p></td>
+<td><p>bo</p></td>
+<td><p>Used internally to reset errors</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:02:PLC:bSafetyReady_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if safe to start a move</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:02:PLC:bUserEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Used to disable power entirely for an axis</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM ENABLE</div>
+<div class="line">field: ZNAM DISABLE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:02:PLC:bUserEnable</p></td>
+<td><p>bo</p></td>
+<td><p>Used to disable power entirely for an axis</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM ENABLE</div>
+<div class="line">field: ZNAM DISABLE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:02:PLC:fAcceleration_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>Used internally and by the IOC to set acceleration</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:02:PLC:fAcceleration</p></td>
+<td><p>ao</p></td>
+<td><p>Used internally and by the IOC to set acceleration</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:02:PLC:fDeceleration_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>Used internally and by the IOC to set deceleration</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:02:PLC:fDeceleration</p></td>
+<td><p>ao</p></td>
+<td><p>Used internally and by the IOC to set deceleration</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:02:PLC:fHomePosition_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>Used internally and by the IOC to pick home position</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:02:PLC:fHomePosition</p></td>
+<td><p>ao</p></td>
+<td><p>Used internally and by the IOC to pick home position</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:02:PLC:fPosDiff_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>Position lag difference</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:02:PLC:fPosition_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>Used internally and by the IOC as the set position</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:02:PLC:fPosition</p></td>
+<td><p>ao</p></td>
+<td><p>Used internally and by the IOC as the set position</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:02:PLC:fVelocity_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>Used internally and by the IOC to set velocity</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:02:PLC:fVelocity</p></td>
+<td><p>ao</p></td>
+<td><p>Used internally and by the IOC to set velocity</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:02:PLC:nBrakeMode_RBV</p></td>
+<td><p>mbbi</p></td>
+<td><p>Describes when the brake will be released</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:02:PLC:nCmdData_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>Used internally and by the IOC to pass extra args</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:02:PLC:nCmdData</p></td>
+<td><p>longout</p></td>
+<td><p>Used internally and by the IOC to pass extra args</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:02:PLC:nCommand_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>Used internally and by the IOC to pick move type</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:02:PLC:nCommand</p></td>
+<td><p>longout</p></td>
+<td><p>Used internally and by the IOC to pick move type</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:02:PLC:nEnableMode_RBV</p></td>
+<td><p>mbbi</p></td>
+<td><p>Describes when the axis will automatically get power</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:02:PLC:nEncoderCount_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>Count from encoder hardware</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:02:PLC:nErrorId_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>Error code if nonzero</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:02:PLC:nHomingMode_RBV</p></td>
+<td><p>mbbi</p></td>
+<td><p>Describes our homing strategy</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:02:PLC:nMotionAxisID_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>Unique ID assigned to each axis in the NC</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:02:PLC:sErrorMessage_RBV</p></td>
+<td><p>waveform</p></td>
+<td><p>Message to identify the error state</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:02:PLC:sName_RBV</p></td>
+<td><p>waveform</p></td>
+<td><p>PLC program name</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:03:PLC:bAllBackwardEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Summary of axis permission to move backward</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:03:PLC:bAllEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Summary of axis permission to have power</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:03:PLC:bAllForwardEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Summary of axis permission to move forward</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:03:PLC:bBrakeRelease_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if brake released</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:03:PLC:bBusy_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if in the middle of a command</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:03:PLC:bDone_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if command finished successfully</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:03:PLC:bEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Used internally to request enables</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:03:PLC:bEnable</p></td>
+<td><p>bo</p></td>
+<td><p>Used internally to request enables</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:03:PLC:bEnableDone_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if done enabling</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:03:PLC:bError_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if we</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:03:PLC:bExecute_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Used internally and by the IOC to start or stop</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:03:PLC:bExecute</p></td>
+<td><p>bo</p></td>
+<td><p>Used internally and by the IOC to start or stop</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:03:PLC:bGantryAxis_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if gantry EPS active</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:03:PLC:bGantryBackwardEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if gantry ok to move backward</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:03:PLC:bGantryForwardEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if gantry ok to move forward</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:03:PLC:bHardwareEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if STO not hit</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:03:PLC:bHome_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if at homing switch</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:03:PLC:bHomeCmd_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Start the homing routine</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:03:PLC:bHomeCmd</p></td>
+<td><p>bo</p></td>
+<td><p>Start the homing routine</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:03:PLC:bHomed_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if the motor has been homed</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:03:PLC:bLimitBackwardEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>FALSE if reverse limit hit</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:03:PLC:bLimitForwardEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>FALSE if forward limit hit</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:03:PLC:bMoveCmd_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Start a move</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:03:PLC:bMoveCmd</p></td>
+<td><p>bo</p></td>
+<td><p>Start a move</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:03:PLC:bPowerSelf_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>FALSE if axis is in PMPS</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:03:PLC:bReset_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Used internally to reset errors</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:03:PLC:bReset</p></td>
+<td><p>bo</p></td>
+<td><p>Used internally to reset errors</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:03:PLC:bSafetyReady_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if safe to start a move</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:03:PLC:bUserEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Used to disable power entirely for an axis</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM ENABLE</div>
+<div class="line">field: ZNAM DISABLE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:03:PLC:bUserEnable</p></td>
+<td><p>bo</p></td>
+<td><p>Used to disable power entirely for an axis</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM ENABLE</div>
+<div class="line">field: ZNAM DISABLE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:03:PLC:fAcceleration_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>Used internally and by the IOC to set acceleration</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:03:PLC:fAcceleration</p></td>
+<td><p>ao</p></td>
+<td><p>Used internally and by the IOC to set acceleration</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:03:PLC:fDeceleration_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>Used internally and by the IOC to set deceleration</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:03:PLC:fDeceleration</p></td>
+<td><p>ao</p></td>
+<td><p>Used internally and by the IOC to set deceleration</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:03:PLC:fHomePosition_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>Used internally and by the IOC to pick home position</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:03:PLC:fHomePosition</p></td>
+<td><p>ao</p></td>
+<td><p>Used internally and by the IOC to pick home position</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:03:PLC:fPosDiff_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>Position lag difference</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:03:PLC:fPosition_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>Used internally and by the IOC as the set position</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:03:PLC:fPosition</p></td>
+<td><p>ao</p></td>
+<td><p>Used internally and by the IOC as the set position</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:03:PLC:fVelocity_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>Used internally and by the IOC to set velocity</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:03:PLC:fVelocity</p></td>
+<td><p>ao</p></td>
+<td><p>Used internally and by the IOC to set velocity</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:03:PLC:nBrakeMode_RBV</p></td>
+<td><p>mbbi</p></td>
+<td><p>Describes when the brake will be released</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:03:PLC:nCmdData_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>Used internally and by the IOC to pass extra args</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:03:PLC:nCmdData</p></td>
+<td><p>longout</p></td>
+<td><p>Used internally and by the IOC to pass extra args</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:03:PLC:nCommand_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>Used internally and by the IOC to pick move type</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:03:PLC:nCommand</p></td>
+<td><p>longout</p></td>
+<td><p>Used internally and by the IOC to pick move type</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:03:PLC:nEnableMode_RBV</p></td>
+<td><p>mbbi</p></td>
+<td><p>Describes when the axis will automatically get power</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:03:PLC:nEncoderCount_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>Count from encoder hardware</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:03:PLC:nErrorId_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>Error code if nonzero</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:03:PLC:nHomingMode_RBV</p></td>
+<td><p>mbbi</p></td>
+<td><p>Describes our homing strategy</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:03:PLC:nMotionAxisID_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>Unique ID assigned to each axis in the NC</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:03:PLC:sErrorMessage_RBV</p></td>
+<td><p>waveform</p></td>
+<td><p>Message to identify the error state</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:03:PLC:sName_RBV</p></td>
+<td><p>waveform</p></td>
+<td><p>PLC program name</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:04:PLC:bAllBackwardEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Summary of axis permission to move backward</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:04:PLC:bAllEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Summary of axis permission to have power</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:04:PLC:bAllForwardEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Summary of axis permission to move forward</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:04:PLC:bBrakeRelease_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if brake released</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:04:PLC:bBusy_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if in the middle of a command</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:04:PLC:bDone_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if command finished successfully</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:04:PLC:bEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Used internally to request enables</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:04:PLC:bEnable</p></td>
+<td><p>bo</p></td>
+<td><p>Used internally to request enables</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:04:PLC:bEnableDone_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if done enabling</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:04:PLC:bError_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if we</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:04:PLC:bExecute_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Used internally and by the IOC to start or stop</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:04:PLC:bExecute</p></td>
+<td><p>bo</p></td>
+<td><p>Used internally and by the IOC to start or stop</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:04:PLC:bGantryAxis_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if gantry EPS active</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:04:PLC:bGantryBackwardEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if gantry ok to move backward</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:04:PLC:bGantryForwardEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if gantry ok to move forward</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:04:PLC:bHardwareEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if STO not hit</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:04:PLC:bHome_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if at homing switch</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:04:PLC:bHomeCmd_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Start the homing routine</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:04:PLC:bHomeCmd</p></td>
+<td><p>bo</p></td>
+<td><p>Start the homing routine</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:04:PLC:bHomed_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if the motor has been homed</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:04:PLC:bLimitBackwardEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>FALSE if reverse limit hit</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:04:PLC:bLimitForwardEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>FALSE if forward limit hit</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:04:PLC:bMoveCmd_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Start a move</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:04:PLC:bMoveCmd</p></td>
+<td><p>bo</p></td>
+<td><p>Start a move</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:04:PLC:bPowerSelf_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>FALSE if axis is in PMPS</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:04:PLC:bReset_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Used internally to reset errors</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:04:PLC:bReset</p></td>
+<td><p>bo</p></td>
+<td><p>Used internally to reset errors</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:04:PLC:bSafetyReady_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if safe to start a move</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:04:PLC:bUserEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Used to disable power entirely for an axis</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM ENABLE</div>
+<div class="line">field: ZNAM DISABLE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:04:PLC:bUserEnable</p></td>
+<td><p>bo</p></td>
+<td><p>Used to disable power entirely for an axis</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM ENABLE</div>
+<div class="line">field: ZNAM DISABLE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:04:PLC:fAcceleration_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>Used internally and by the IOC to set acceleration</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:04:PLC:fAcceleration</p></td>
+<td><p>ao</p></td>
+<td><p>Used internally and by the IOC to set acceleration</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:04:PLC:fDeceleration_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>Used internally and by the IOC to set deceleration</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:04:PLC:fDeceleration</p></td>
+<td><p>ao</p></td>
+<td><p>Used internally and by the IOC to set deceleration</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:04:PLC:fHomePosition_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>Used internally and by the IOC to pick home position</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:04:PLC:fHomePosition</p></td>
+<td><p>ao</p></td>
+<td><p>Used internally and by the IOC to pick home position</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:04:PLC:fPosDiff_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>Position lag difference</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:04:PLC:fPosition_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>Used internally and by the IOC as the set position</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:04:PLC:fPosition</p></td>
+<td><p>ao</p></td>
+<td><p>Used internally and by the IOC as the set position</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:04:PLC:fVelocity_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>Used internally and by the IOC to set velocity</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:04:PLC:fVelocity</p></td>
+<td><p>ao</p></td>
+<td><p>Used internally and by the IOC to set velocity</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:04:PLC:nBrakeMode_RBV</p></td>
+<td><p>mbbi</p></td>
+<td><p>Describes when the brake will be released</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:04:PLC:nCmdData_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>Used internally and by the IOC to pass extra args</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:04:PLC:nCmdData</p></td>
+<td><p>longout</p></td>
+<td><p>Used internally and by the IOC to pass extra args</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:04:PLC:nCommand_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>Used internally and by the IOC to pick move type</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:04:PLC:nCommand</p></td>
+<td><p>longout</p></td>
+<td><p>Used internally and by the IOC to pick move type</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:04:PLC:nEnableMode_RBV</p></td>
+<td><p>mbbi</p></td>
+<td><p>Describes when the axis will automatically get power</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:04:PLC:nEncoderCount_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>Count from encoder hardware</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:04:PLC:nErrorId_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>Error code if nonzero</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:04:PLC:nHomingMode_RBV</p></td>
+<td><p>mbbi</p></td>
+<td><p>Describes our homing strategy</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:04:PLC:nMotionAxisID_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>Unique ID assigned to each axis in the NC</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:04:PLC:sErrorMessage_RBV</p></td>
+<td><p>waveform</p></td>
+<td><p>Message to identify the error state</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:04:PLC:sName_RBV</p></td>
+<td><p>waveform</p></td>
+<td><p>PLC program name</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:05:PLC:bAllBackwardEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Summary of axis permission to move backward</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:05:PLC:bAllEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Summary of axis permission to have power</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:05:PLC:bAllForwardEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Summary of axis permission to move forward</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:05:PLC:bBrakeRelease_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if brake released</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:05:PLC:bBusy_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if in the middle of a command</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:05:PLC:bDone_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if command finished successfully</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:05:PLC:bEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Used internally to request enables</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:05:PLC:bEnable</p></td>
+<td><p>bo</p></td>
+<td><p>Used internally to request enables</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:05:PLC:bEnableDone_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if done enabling</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:05:PLC:bError_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if we</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:05:PLC:bExecute_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Used internally and by the IOC to start or stop</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:05:PLC:bExecute</p></td>
+<td><p>bo</p></td>
+<td><p>Used internally and by the IOC to start or stop</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:05:PLC:bGantryAxis_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if gantry EPS active</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:05:PLC:bGantryBackwardEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if gantry ok to move backward</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:05:PLC:bGantryForwardEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if gantry ok to move forward</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:05:PLC:bHardwareEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if STO not hit</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:05:PLC:bHome_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if at homing switch</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:05:PLC:bHomeCmd_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Start the homing routine</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:05:PLC:bHomeCmd</p></td>
+<td><p>bo</p></td>
+<td><p>Start the homing routine</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:05:PLC:bHomed_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if the motor has been homed</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:05:PLC:bLimitBackwardEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>FALSE if reverse limit hit</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:05:PLC:bLimitForwardEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>FALSE if forward limit hit</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:05:PLC:bMoveCmd_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Start a move</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:05:PLC:bMoveCmd</p></td>
+<td><p>bo</p></td>
+<td><p>Start a move</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:05:PLC:bPowerSelf_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>FALSE if axis is in PMPS</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:05:PLC:bReset_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Used internally to reset errors</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:05:PLC:bReset</p></td>
+<td><p>bo</p></td>
+<td><p>Used internally to reset errors</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:05:PLC:bSafetyReady_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if safe to start a move</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:05:PLC:bUserEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Used to disable power entirely for an axis</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM ENABLE</div>
+<div class="line">field: ZNAM DISABLE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:05:PLC:bUserEnable</p></td>
+<td><p>bo</p></td>
+<td><p>Used to disable power entirely for an axis</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM ENABLE</div>
+<div class="line">field: ZNAM DISABLE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:05:PLC:fAcceleration_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>Used internally and by the IOC to set acceleration</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:05:PLC:fAcceleration</p></td>
+<td><p>ao</p></td>
+<td><p>Used internally and by the IOC to set acceleration</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:05:PLC:fDeceleration_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>Used internally and by the IOC to set deceleration</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:05:PLC:fDeceleration</p></td>
+<td><p>ao</p></td>
+<td><p>Used internally and by the IOC to set deceleration</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:05:PLC:fHomePosition_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>Used internally and by the IOC to pick home position</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:05:PLC:fHomePosition</p></td>
+<td><p>ao</p></td>
+<td><p>Used internally and by the IOC to pick home position</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:05:PLC:fPosDiff_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>Position lag difference</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:05:PLC:fPosition_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>Used internally and by the IOC as the set position</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:05:PLC:fPosition</p></td>
+<td><p>ao</p></td>
+<td><p>Used internally and by the IOC as the set position</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:05:PLC:fVelocity_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>Used internally and by the IOC to set velocity</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:05:PLC:fVelocity</p></td>
+<td><p>ao</p></td>
+<td><p>Used internally and by the IOC to set velocity</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:05:PLC:nBrakeMode_RBV</p></td>
+<td><p>mbbi</p></td>
+<td><p>Describes when the brake will be released</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:05:PLC:nCmdData_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>Used internally and by the IOC to pass extra args</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:05:PLC:nCmdData</p></td>
+<td><p>longout</p></td>
+<td><p>Used internally and by the IOC to pass extra args</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:05:PLC:nCommand_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>Used internally and by the IOC to pick move type</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:05:PLC:nCommand</p></td>
+<td><p>longout</p></td>
+<td><p>Used internally and by the IOC to pick move type</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:05:PLC:nEnableMode_RBV</p></td>
+<td><p>mbbi</p></td>
+<td><p>Describes when the axis will automatically get power</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:05:PLC:nEncoderCount_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>Count from encoder hardware</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:05:PLC:nErrorId_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>Error code if nonzero</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:05:PLC:nHomingMode_RBV</p></td>
+<td><p>mbbi</p></td>
+<td><p>Describes our homing strategy</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:05:PLC:nMotionAxisID_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>Unique ID assigned to each axis in the NC</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:05:PLC:sErrorMessage_RBV</p></td>
+<td><p>waveform</p></td>
+<td><p>Message to identify the error state</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:05:PLC:sName_RBV</p></td>
+<td><p>waveform</p></td>
+<td><p>PLC program name</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:06:PLC:bAllBackwardEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Summary of axis permission to move backward</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:06:PLC:bAllEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Summary of axis permission to have power</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:06:PLC:bAllForwardEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Summary of axis permission to move forward</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:06:PLC:bBrakeRelease_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if brake released</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:06:PLC:bBusy_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if in the middle of a command</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:06:PLC:bDone_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if command finished successfully</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:06:PLC:bEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Used internally to request enables</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:06:PLC:bEnable</p></td>
+<td><p>bo</p></td>
+<td><p>Used internally to request enables</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:06:PLC:bEnableDone_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if done enabling</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:06:PLC:bError_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if we</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:06:PLC:bExecute_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Used internally and by the IOC to start or stop</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:06:PLC:bExecute</p></td>
+<td><p>bo</p></td>
+<td><p>Used internally and by the IOC to start or stop</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:06:PLC:bGantryAxis_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if gantry EPS active</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:06:PLC:bGantryBackwardEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if gantry ok to move backward</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:06:PLC:bGantryForwardEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if gantry ok to move forward</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:06:PLC:bHardwareEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if STO not hit</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:06:PLC:bHome_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if at homing switch</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:06:PLC:bHomeCmd_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Start the homing routine</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:06:PLC:bHomeCmd</p></td>
+<td><p>bo</p></td>
+<td><p>Start the homing routine</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:06:PLC:bHomed_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if the motor has been homed</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:06:PLC:bLimitBackwardEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>FALSE if reverse limit hit</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:06:PLC:bLimitForwardEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>FALSE if forward limit hit</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:06:PLC:bMoveCmd_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Start a move</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:06:PLC:bMoveCmd</p></td>
+<td><p>bo</p></td>
+<td><p>Start a move</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:06:PLC:bPowerSelf_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>FALSE if axis is in PMPS</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:06:PLC:bReset_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Used internally to reset errors</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:06:PLC:bReset</p></td>
+<td><p>bo</p></td>
+<td><p>Used internally to reset errors</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:06:PLC:bSafetyReady_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if safe to start a move</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:06:PLC:bUserEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Used to disable power entirely for an axis</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM ENABLE</div>
+<div class="line">field: ZNAM DISABLE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:06:PLC:bUserEnable</p></td>
+<td><p>bo</p></td>
+<td><p>Used to disable power entirely for an axis</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM ENABLE</div>
+<div class="line">field: ZNAM DISABLE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:06:PLC:fAcceleration_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>Used internally and by the IOC to set acceleration</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:06:PLC:fAcceleration</p></td>
+<td><p>ao</p></td>
+<td><p>Used internally and by the IOC to set acceleration</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:06:PLC:fDeceleration_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>Used internally and by the IOC to set deceleration</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:06:PLC:fDeceleration</p></td>
+<td><p>ao</p></td>
+<td><p>Used internally and by the IOC to set deceleration</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:06:PLC:fHomePosition_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>Used internally and by the IOC to pick home position</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:06:PLC:fHomePosition</p></td>
+<td><p>ao</p></td>
+<td><p>Used internally and by the IOC to pick home position</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:06:PLC:fPosDiff_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>Position lag difference</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:06:PLC:fPosition_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>Used internally and by the IOC as the set position</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:06:PLC:fPosition</p></td>
+<td><p>ao</p></td>
+<td><p>Used internally and by the IOC as the set position</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:06:PLC:fVelocity_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>Used internally and by the IOC to set velocity</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:06:PLC:fVelocity</p></td>
+<td><p>ao</p></td>
+<td><p>Used internally and by the IOC to set velocity</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:06:PLC:nBrakeMode_RBV</p></td>
+<td><p>mbbi</p></td>
+<td><p>Describes when the brake will be released</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:06:PLC:nCmdData_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>Used internally and by the IOC to pass extra args</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:06:PLC:nCmdData</p></td>
+<td><p>longout</p></td>
+<td><p>Used internally and by the IOC to pass extra args</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:06:PLC:nCommand_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>Used internally and by the IOC to pick move type</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:06:PLC:nCommand</p></td>
+<td><p>longout</p></td>
+<td><p>Used internally and by the IOC to pick move type</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:06:PLC:nEnableMode_RBV</p></td>
+<td><p>mbbi</p></td>
+<td><p>Describes when the axis will automatically get power</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:06:PLC:nEncoderCount_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>Count from encoder hardware</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:06:PLC:nErrorId_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>Error code if nonzero</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:06:PLC:nHomingMode_RBV</p></td>
+<td><p>mbbi</p></td>
+<td><p>Describes our homing strategy</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:06:PLC:nMotionAxisID_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>Unique ID assigned to each axis in the NC</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:06:PLC:sErrorMessage_RBV</p></td>
+<td><p>waveform</p></td>
+<td><p>Message to identify the error state</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:06:PLC:sName_RBV</p></td>
+<td><p>waveform</p></td>
+<td><p>PLC program name</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:07:PLC:bAllBackwardEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Summary of axis permission to move backward</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:07:PLC:bAllEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Summary of axis permission to have power</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:07:PLC:bAllForwardEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Summary of axis permission to move forward</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:07:PLC:bBrakeRelease_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if brake released</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:07:PLC:bBusy_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if in the middle of a command</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:07:PLC:bDone_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if command finished successfully</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:07:PLC:bEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Used internally to request enables</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:07:PLC:bEnable</p></td>
+<td><p>bo</p></td>
+<td><p>Used internally to request enables</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:07:PLC:bEnableDone_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if done enabling</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:07:PLC:bError_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if we</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:07:PLC:bExecute_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Used internally and by the IOC to start or stop</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:07:PLC:bExecute</p></td>
+<td><p>bo</p></td>
+<td><p>Used internally and by the IOC to start or stop</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:07:PLC:bGantryAxis_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if gantry EPS active</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:07:PLC:bGantryBackwardEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if gantry ok to move backward</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:07:PLC:bGantryForwardEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if gantry ok to move forward</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:07:PLC:bHardwareEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if STO not hit</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:07:PLC:bHome_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if at homing switch</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:07:PLC:bHomeCmd_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Start the homing routine</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:07:PLC:bHomeCmd</p></td>
+<td><p>bo</p></td>
+<td><p>Start the homing routine</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:07:PLC:bHomed_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if the motor has been homed</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:07:PLC:bLimitBackwardEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>FALSE if reverse limit hit</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:07:PLC:bLimitForwardEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>FALSE if forward limit hit</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:07:PLC:bMoveCmd_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Start a move</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:07:PLC:bMoveCmd</p></td>
+<td><p>bo</p></td>
+<td><p>Start a move</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:07:PLC:bPowerSelf_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>FALSE if axis is in PMPS</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:07:PLC:bReset_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Used internally to reset errors</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:07:PLC:bReset</p></td>
+<td><p>bo</p></td>
+<td><p>Used internally to reset errors</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:07:PLC:bSafetyReady_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if safe to start a move</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:07:PLC:bUserEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Used to disable power entirely for an axis</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM ENABLE</div>
+<div class="line">field: ZNAM DISABLE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:07:PLC:bUserEnable</p></td>
+<td><p>bo</p></td>
+<td><p>Used to disable power entirely for an axis</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM ENABLE</div>
+<div class="line">field: ZNAM DISABLE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:07:PLC:fAcceleration_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>Used internally and by the IOC to set acceleration</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:07:PLC:fAcceleration</p></td>
+<td><p>ao</p></td>
+<td><p>Used internally and by the IOC to set acceleration</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:07:PLC:fDeceleration_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>Used internally and by the IOC to set deceleration</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:07:PLC:fDeceleration</p></td>
+<td><p>ao</p></td>
+<td><p>Used internally and by the IOC to set deceleration</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:07:PLC:fHomePosition_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>Used internally and by the IOC to pick home position</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:07:PLC:fHomePosition</p></td>
+<td><p>ao</p></td>
+<td><p>Used internally and by the IOC to pick home position</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:07:PLC:fPosDiff_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>Position lag difference</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:07:PLC:fPosition_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>Used internally and by the IOC as the set position</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:07:PLC:fPosition</p></td>
+<td><p>ao</p></td>
+<td><p>Used internally and by the IOC as the set position</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:07:PLC:fVelocity_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>Used internally and by the IOC to set velocity</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:07:PLC:fVelocity</p></td>
+<td><p>ao</p></td>
+<td><p>Used internally and by the IOC to set velocity</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:07:PLC:nBrakeMode_RBV</p></td>
+<td><p>mbbi</p></td>
+<td><p>Describes when the brake will be released</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:07:PLC:nCmdData_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>Used internally and by the IOC to pass extra args</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:07:PLC:nCmdData</p></td>
+<td><p>longout</p></td>
+<td><p>Used internally and by the IOC to pass extra args</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:07:PLC:nCommand_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>Used internally and by the IOC to pick move type</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:07:PLC:nCommand</p></td>
+<td><p>longout</p></td>
+<td><p>Used internally and by the IOC to pick move type</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:07:PLC:nEnableMode_RBV</p></td>
+<td><p>mbbi</p></td>
+<td><p>Describes when the axis will automatically get power</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:07:PLC:nEncoderCount_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>Count from encoder hardware</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:07:PLC:nErrorId_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>Error code if nonzero</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:07:PLC:nHomingMode_RBV</p></td>
+<td><p>mbbi</p></td>
+<td><p>Describes our homing strategy</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:07:PLC:nMotionAxisID_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>Unique ID assigned to each axis in the NC</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:07:PLC:sErrorMessage_RBV</p></td>
+<td><p>waveform</p></td>
+<td><p>Message to identify the error state</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:07:PLC:sName_RBV</p></td>
+<td><p>waveform</p></td>
+<td><p>PLC program name</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:08:PLC:bAllBackwardEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Summary of axis permission to move backward</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:08:PLC:bAllEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Summary of axis permission to have power</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:08:PLC:bAllForwardEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Summary of axis permission to move forward</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:08:PLC:bBrakeRelease_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if brake released</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:08:PLC:bBusy_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if in the middle of a command</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:08:PLC:bDone_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if command finished successfully</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:08:PLC:bEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Used internally to request enables</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:08:PLC:bEnable</p></td>
+<td><p>bo</p></td>
+<td><p>Used internally to request enables</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:08:PLC:bEnableDone_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if done enabling</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:08:PLC:bError_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if we</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:08:PLC:bExecute_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Used internally and by the IOC to start or stop</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:08:PLC:bExecute</p></td>
+<td><p>bo</p></td>
+<td><p>Used internally and by the IOC to start or stop</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:08:PLC:bGantryAxis_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if gantry EPS active</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:08:PLC:bGantryBackwardEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if gantry ok to move backward</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:08:PLC:bGantryForwardEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if gantry ok to move forward</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:08:PLC:bHardwareEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if STO not hit</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:08:PLC:bHome_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if at homing switch</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:08:PLC:bHomeCmd_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Start the homing routine</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:08:PLC:bHomeCmd</p></td>
+<td><p>bo</p></td>
+<td><p>Start the homing routine</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:08:PLC:bHomed_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if the motor has been homed</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:08:PLC:bLimitBackwardEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>FALSE if reverse limit hit</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:08:PLC:bLimitForwardEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>FALSE if forward limit hit</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:08:PLC:bMoveCmd_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Start a move</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:08:PLC:bMoveCmd</p></td>
+<td><p>bo</p></td>
+<td><p>Start a move</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:08:PLC:bPowerSelf_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>FALSE if axis is in PMPS</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:08:PLC:bReset_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Used internally to reset errors</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:08:PLC:bReset</p></td>
+<td><p>bo</p></td>
+<td><p>Used internally to reset errors</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:08:PLC:bSafetyReady_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if safe to start a move</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:08:PLC:bUserEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Used to disable power entirely for an axis</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM ENABLE</div>
+<div class="line">field: ZNAM DISABLE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:08:PLC:bUserEnable</p></td>
+<td><p>bo</p></td>
+<td><p>Used to disable power entirely for an axis</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM ENABLE</div>
+<div class="line">field: ZNAM DISABLE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:08:PLC:fAcceleration_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>Used internally and by the IOC to set acceleration</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:08:PLC:fAcceleration</p></td>
+<td><p>ao</p></td>
+<td><p>Used internally and by the IOC to set acceleration</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:08:PLC:fDeceleration_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>Used internally and by the IOC to set deceleration</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:08:PLC:fDeceleration</p></td>
+<td><p>ao</p></td>
+<td><p>Used internally and by the IOC to set deceleration</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:08:PLC:fHomePosition_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>Used internally and by the IOC to pick home position</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:08:PLC:fHomePosition</p></td>
+<td><p>ao</p></td>
+<td><p>Used internally and by the IOC to pick home position</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:08:PLC:fPosDiff_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>Position lag difference</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:08:PLC:fPosition_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>Used internally and by the IOC as the set position</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:08:PLC:fPosition</p></td>
+<td><p>ao</p></td>
+<td><p>Used internally and by the IOC as the set position</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:08:PLC:fVelocity_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>Used internally and by the IOC to set velocity</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:08:PLC:fVelocity</p></td>
+<td><p>ao</p></td>
+<td><p>Used internally and by the IOC to set velocity</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:08:PLC:nBrakeMode_RBV</p></td>
+<td><p>mbbi</p></td>
+<td><p>Describes when the brake will be released</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:08:PLC:nCmdData_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>Used internally and by the IOC to pass extra args</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:08:PLC:nCmdData</p></td>
+<td><p>longout</p></td>
+<td><p>Used internally and by the IOC to pass extra args</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:08:PLC:nCommand_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>Used internally and by the IOC to pick move type</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:08:PLC:nCommand</p></td>
+<td><p>longout</p></td>
+<td><p>Used internally and by the IOC to pick move type</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:08:PLC:nEnableMode_RBV</p></td>
+<td><p>mbbi</p></td>
+<td><p>Describes when the axis will automatically get power</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:08:PLC:nEncoderCount_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>Count from encoder hardware</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:08:PLC:nErrorId_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>Error code if nonzero</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:08:PLC:nHomingMode_RBV</p></td>
+<td><p>mbbi</p></td>
+<td><p>Describes our homing strategy</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:08:PLC:nMotionAxisID_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>Unique ID assigned to each axis in the NC</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:08:PLC:sErrorMessage_RBV</p></td>
+<td><p>waveform</p></td>
+<td><p>Message to identify the error state</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:08:PLC:sName_RBV</p></td>
+<td><p>waveform</p></td>
+<td><p>PLC program name</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:09:PLC:bAllBackwardEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Summary of axis permission to move backward</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:09:PLC:bAllEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Summary of axis permission to have power</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:09:PLC:bAllForwardEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Summary of axis permission to move forward</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:09:PLC:bBrakeRelease_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if brake released</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:09:PLC:bBusy_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if in the middle of a command</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:09:PLC:bDone_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if command finished successfully</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:09:PLC:bEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Used internally to request enables</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:09:PLC:bEnable</p></td>
+<td><p>bo</p></td>
+<td><p>Used internally to request enables</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:09:PLC:bEnableDone_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if done enabling</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:09:PLC:bError_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if we</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:09:PLC:bExecute_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Used internally and by the IOC to start or stop</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:09:PLC:bExecute</p></td>
+<td><p>bo</p></td>
+<td><p>Used internally and by the IOC to start or stop</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:09:PLC:bGantryAxis_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if gantry EPS active</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:09:PLC:bGantryBackwardEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if gantry ok to move backward</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:09:PLC:bGantryForwardEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if gantry ok to move forward</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:09:PLC:bHardwareEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if STO not hit</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:09:PLC:bHome_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if at homing switch</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:09:PLC:bHomeCmd_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Start the homing routine</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:09:PLC:bHomeCmd</p></td>
+<td><p>bo</p></td>
+<td><p>Start the homing routine</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:09:PLC:bHomed_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if the motor has been homed</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:09:PLC:bLimitBackwardEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>FALSE if reverse limit hit</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:09:PLC:bLimitForwardEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>FALSE if forward limit hit</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:09:PLC:bMoveCmd_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Start a move</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:09:PLC:bMoveCmd</p></td>
+<td><p>bo</p></td>
+<td><p>Start a move</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:09:PLC:bPowerSelf_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>FALSE if axis is in PMPS</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:09:PLC:bReset_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Used internally to reset errors</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:09:PLC:bReset</p></td>
+<td><p>bo</p></td>
+<td><p>Used internally to reset errors</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:09:PLC:bSafetyReady_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>TRUE if safe to start a move</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:09:PLC:bUserEnable_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Used to disable power entirely for an axis</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM ENABLE</div>
+<div class="line">field: ZNAM DISABLE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:09:PLC:bUserEnable</p></td>
+<td><p>bo</p></td>
+<td><p>Used to disable power entirely for an axis</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM ENABLE</div>
+<div class="line">field: ZNAM DISABLE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:09:PLC:fAcceleration_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>Used internally and by the IOC to set acceleration</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:09:PLC:fAcceleration</p></td>
+<td><p>ao</p></td>
+<td><p>Used internally and by the IOC to set acceleration</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:09:PLC:fDeceleration_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>Used internally and by the IOC to set deceleration</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:09:PLC:fDeceleration</p></td>
+<td><p>ao</p></td>
+<td><p>Used internally and by the IOC to set deceleration</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:09:PLC:fHomePosition_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>Used internally and by the IOC to pick home position</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:09:PLC:fHomePosition</p></td>
+<td><p>ao</p></td>
+<td><p>Used internally and by the IOC to pick home position</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:09:PLC:fPosDiff_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>Position lag difference</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:09:PLC:fPosition_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>Used internally and by the IOC as the set position</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:09:PLC:fPosition</p></td>
+<td><p>ao</p></td>
+<td><p>Used internally and by the IOC as the set position</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:09:PLC:fVelocity_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>Used internally and by the IOC to set velocity</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:09:PLC:fVelocity</p></td>
+<td><p>ao</p></td>
+<td><p>Used internally and by the IOC to set velocity</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:09:PLC:nBrakeMode_RBV</p></td>
+<td><p>mbbi</p></td>
+<td><p>Describes when the brake will be released</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:09:PLC:nCmdData_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>Used internally and by the IOC to pass extra args</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:09:PLC:nCmdData</p></td>
+<td><p>longout</p></td>
+<td><p>Used internally and by the IOC to pass extra args</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:09:PLC:nCommand_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>Used internally and by the IOC to pick move type</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:09:PLC:nCommand</p></td>
+<td><p>longout</p></td>
+<td><p>Used internally and by the IOC to pick move type</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:09:PLC:nEnableMode_RBV</p></td>
+<td><p>mbbi</p></td>
+<td><p>Describes when the axis will automatically get power</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:09:PLC:nEncoderCount_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>Count from encoder hardware</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:09:PLC:nErrorId_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>Error code if nonzero</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:09:PLC:nHomingMode_RBV</p></td>
+<td><p>mbbi</p></td>
+<td><p>Describes our homing strategy</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:09:PLC:nMotionAxisID_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>Unique ID assigned to each axis in the NC</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TMO:SPEC:MMS:09:PLC:sErrorMessage_RBV</p></td>
+<td><p>waveform</p></td>
+<td><p>Message to identify the error state</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TMO:SPEC:MMS:09:PLC:sName_RBV</p></td>
+<td><p>waveform</p></td>
+<td><p>PLC program name</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX)AccumulatedFastFaults_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>PMPS_GVL.AccumulatedFF</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX)SuccessfulPreemptions_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>PMPS_GVL.SuccessfulPreemption</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX)0RateBeamCnst:Veto_RBV</p></td>
+<td><p>waveform</p></td>
+<td><p>0-rate beam constant</p></td>
+<td><div class="line-block">
+<div class="line">archive: 1s monitor</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX)0RateBeamCnst:Cohort_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>Cohort inc on each arb cycle</p></td>
+<td><div class="line-block">
+<div class="line">archive: 1s monitor</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX)0RateBeamCnst:Rate_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>0-rate beam constant</p></td>
+<td><div class="line-block">
+<div class="line">archive: 1s monitor</div>
+<div class="line">field: EGU Hz</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX)0RateBeamCnst:Transmission_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>0-rate beam constant</p></td>
+<td><div class="line-block">
+<div class="line">archive: 1s monitor</div>
+<div class="line">field: HOPR 1</div>
+<div class="line">field: LOPR 0</div>
+<div class="line">field: PREC 2</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX)0RateBeamCnst:PhotonEnergyRanges_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>0-rate beam constant</p></td>
+<td><div class="line-block">
+<div class="line">archive: 1s monitor</div>
+<div class="line">field: EGU eV</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX)0RateBeamCnst:Valid_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>0-rate beam constant</p></td>
+<td><div class="line-block">
+<div class="line">archive: 1s monitor</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX)FullBeamCnst:Veto_RBV</p></td>
+<td><p>waveform</p></td>
+<td><p>Full beam constant</p></td>
+<td><div class="line-block">
+<div class="line">archive: 1s monitor</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX)FullBeamCnst:Cohort_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>Cohort inc on each arb cycle</p></td>
+<td><div class="line-block">
+<div class="line">archive: 1s monitor</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX)FullBeamCnst:Rate_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>Full beam constant</p></td>
+<td><div class="line-block">
+<div class="line">archive: 1s monitor</div>
+<div class="line">field: EGU Hz</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX)FullBeamCnst:Transmission_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>Full beam constant</p></td>
+<td><div class="line-block">
+<div class="line">archive: 1s monitor</div>
+<div class="line">field: HOPR 1</div>
+<div class="line">field: LOPR 0</div>
+<div class="line">field: PREC 2</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX)FullBeamCnst:PhotonEnergyRanges_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>Full beam constant</p></td>
+<td><div class="line-block">
+<div class="line">archive: 1s monitor</div>
+<div class="line">field: EGU eV</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX)FullBeamCnst:Valid_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Full beam constant</p></td>
+<td><div class="line-block">
+<div class="line">archive: 1s monitor</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX)eVRangeCnst_RBV</p></td>
+<td><p>waveform</p></td>
+<td><p>Active eV Range constants</p></td>
+<td><div class="line-block">
+<div class="line">archive: 1s monitor</div>
+<div class="line">field: EGU eV</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX)K:eVRangeCnst_RBV</p></td>
+<td><p>waveform</p></td>
+<td><p>eV Range constants</p></td>
+<td><div class="line-block">
+<div class="line">archive: 1s monitor</div>
+<div class="line">field: EGU eV</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX)L:eVRangeCnst_RBV</p></td>
+<td><p>waveform</p></td>
+<td><p>eV Range constants</p></td>
+<td><div class="line-block">
+<div class="line">archive: 1s monitor</div>
+<div class="line">field: EGU eV</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX)eVRangeHyst_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>eV Range hystersis</p></td>
+<td><div class="line-block">
+<div class="line">archive: 1s monitor</div>
+<div class="line">field: EGU eV</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX)CurrentBP:Veto_RBV</p></td>
+<td><p>waveform</p></td>
+<td><p>PMPS_GVL.stCurrentBeamParameters.aVetoDevices</p></td>
+<td><div class="line-block">
+<div class="line">archive: 1s monitor</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX)CurrentBP:Cohort_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>Cohort inc on each arb cycle</p></td>
+<td><div class="line-block">
+<div class="line">archive: 1s monitor</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX)CurrentBP:Rate_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>PMPS_GVL.stCurrentBeamParameters.nRate</p></td>
+<td><div class="line-block">
+<div class="line">archive: 1s monitor</div>
+<div class="line">field: EGU Hz</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX)CurrentBP:Transmission_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>PMPS_GVL.stCurrentBeamParameters.nTran</p></td>
+<td><div class="line-block">
+<div class="line">archive: 1s monitor</div>
+<div class="line">field: HOPR 1</div>
+<div class="line">field: LOPR 0</div>
+<div class="line">field: PREC 2</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX)CurrentBP:PhotonEnergyRanges_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>PMPS_GVL.stCurrentBeamParameters.neVRange</p></td>
+<td><div class="line-block">
+<div class="line">archive: 1s monitor</div>
+<div class="line">field: EGU eV</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX)CurrentBP:Valid_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>PMPS_GVL.stCurrentBeamParameters.xValid</p></td>
+<td><div class="line-block">
+<div class="line">archive: 1s monitor</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX)RequestedBP:Veto_RBV</p></td>
+<td><p>waveform</p></td>
+<td><p>PMPS_GVL.stRequestedBeamParameters.aVetoDevices</p></td>
+<td><div class="line-block">
+<div class="line">archive: 1s monitor</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX)RequestedBP:Cohort_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>Cohort inc on each arb cycle</p></td>
+<td><div class="line-block">
+<div class="line">archive: 1s monitor</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX)RequestedBP:Rate_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>PMPS_GVL.stRequestedBeamParameters.nRate</p></td>
+<td><div class="line-block">
+<div class="line">archive: 1s monitor</div>
+<div class="line">field: EGU Hz</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX)RequestedBP:Transmission_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>PMPS_GVL.stRequestedBeamParameters.nTran</p></td>
+<td><div class="line-block">
+<div class="line">archive: 1s monitor</div>
+<div class="line">field: HOPR 1</div>
+<div class="line">field: LOPR 0</div>
+<div class="line">field: PREC 2</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX)RequestedBP:PhotonEnergyRanges_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>PMPS_GVL.stRequestedBeamParameters.neVRange</p></td>
+<td><div class="line-block">
+<div class="line">archive: 1s monitor</div>
+<div class="line">field: EGU eV</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX)RequestedBP:Valid_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>PMPS_GVL.stRequestedBeamParameters.xValid</p></td>
+<td><div class="line-block">
+<div class="line">archive: 1s monitor</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="lcls-plc-tmo-spectrometer-motion_tmo_spectrometer_motion_summary.html" class="btn btn-neutral float-left" title="Settings" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="lcls-plc-tmo-spectrometer-motion_tmo_spectrometer_motion_source.html" class="btn btn-neutral float-right" title="DUTs" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, SLAC National Accelerator Laboratory.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

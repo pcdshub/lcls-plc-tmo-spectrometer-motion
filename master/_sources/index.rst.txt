@@ -1,0 +1,29 @@
+lcls-plc-tmo-spectrometer-motion
+--------------------------------
+
+.. toctree::
+    :maxdepth: 2
+    :caption: lcls-plc-tmo-spectrometer-motion
+
+    lcls-plc-tmo-spectrometer-motion_pragmas
+    lcls-plc-tmo-spectrometer-motion_nc
+    lcls-plc-tmo-spectrometer-motion_boxes
+    lcls-plc-tmo-spectrometer-motion_links
+
+
+.. toctree::
+    :maxdepth: 2
+    :caption: tmo_spectrometer_motion
+
+    lcls-plc-tmo-spectrometer-motion_tmo_spectrometer_motion_summary
+    lcls-plc-tmo-spectrometer-motion_tmo_spectrometer_motion_epics
+    lcls-plc-tmo-spectrometer-motion_tmo_spectrometer_motion_source
+
+
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`

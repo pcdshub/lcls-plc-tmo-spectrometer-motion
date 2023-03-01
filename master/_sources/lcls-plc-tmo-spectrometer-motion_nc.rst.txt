@@ -1,0 +1,269 @@
+
+NC Settings
+-----------
+
+.. csv-table::
+    :header: Axis ID, Name
+    :align: center
+
+        1, LensX
+        2, FoilX
+        3, ZonePlateX
+        4, ZonePlateY
+        5, ZonePlateZ
+        6, YagX
+        7, YagY
+        8, YagZ
+        9, YagTheta
+
+
+
+Axis 1: LensX
+^^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Setting, Value
+    :align: center
+
+    Axis ID, 1
+    Name, LensX
+    AxisType, 1
+    CreateSymbols, true
+    Dynamic:Acceleration, 2
+    Dynamic:Deceleration, 2
+    Enc:EncType, 4
+    Enc:Inc:RefSoftSyncMask, #x0000ffff
+    Enc:MaxCount, #x0000ffff
+    Enc:ScaleFactorNumerator, 3.90625e-05
+    Id, 1
+    OtherSettings:AllowMotionCmdToSlave, true
+    OtherSettings:PulseDistanceNeg, 0.5
+    OtherSettings:PulseDistancePos, 0.5
+    Velo:FastManual, 1
+    Velo:Maximum, 1
+    Velo:SlowManual, 0.1
+
+
+
+Axis 2: FoilX
+^^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Setting, Value
+    :align: center
+
+    Axis ID, 2
+    Name, FoilX
+    AxisType, 1
+    CreateSymbols, true
+    Dynamic:Acceleration, 2
+    Dynamic:Deceleration, 2
+    Enc:EncType, 4
+    Enc:Inc:RefSoftSyncMask, #x0000ffff
+    Enc:MaxCount, #x0000ffff
+    Enc:ScaleFactorNumerator, 0.000244140625
+    Enc:SoftEndMaxControl:Enable, true
+    Enc:SoftEndMaxControl:Range, -1
+    Id, 2
+    OtherSettings:AllowMotionCmdToSlave, true
+    OtherSettings:PulseDistanceNeg, 0.5
+    OtherSettings:PulseDistancePos, 0.5
+    Velo:FastManual, 1
+    Velo:Maximum, 1
+    Velo:SlowManual, 0.1
+
+
+
+Axis 3: ZonePlateX
+^^^^^^^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Setting, Value
+    :align: center
+
+    Axis ID, 3
+    Name, ZonePlateX
+    AxisType, 1
+    CreateSymbols, true
+    Dynamic:Acceleration, 2
+    Dynamic:Deceleration, 2
+    Enc:EncType, 4
+    Enc:Inc:RefSoftSyncMask, #x0000ffff
+    Enc:Inverse, true
+    Enc:MaxCount, #x0000ffff
+    Enc:ScaleFactorNumerator, 0.000103125
+    Id, 3
+    OtherSettings:AllowMotionCmdToSlave, true
+    OtherSettings:PulseDistanceNeg, 0.5
+    OtherSettings:PulseDistancePos, 0.5
+    Velo:FastManual, 1
+    Velo:Maximum, 1
+    Velo:SlowManual, 0.1
+
+
+
+Axis 4: ZonePlateY
+^^^^^^^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Setting, Value
+    :align: center
+
+    Axis ID, 4
+    Name, ZonePlateY
+    AxisType, 1
+    CreateSymbols, true
+    Dynamic:Acceleration, 2
+    Dynamic:Deceleration, 2
+    Enc:EncType, 4
+    Enc:Inc:RefSoftSyncMask, #x0000ffff
+    Enc:MaxCount, #x0000ffff
+    Enc:ScaleFactorNumerator, 4.6875e-05
+    Id, 4
+    OtherSettings:AllowMotionCmdToSlave, true
+    OtherSettings:PulseDistanceNeg, 0.5
+    OtherSettings:PulseDistancePos, 0.5
+    Velo:FastManual, 1
+    Velo:Maximum, 1
+    Velo:SlowManual, 0.1
+
+
+
+Axis 5: ZonePlateZ
+^^^^^^^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Setting, Value
+    :align: center
+
+    Axis ID, 5
+    Name, ZonePlateZ
+    AxisType, 1
+    CreateSymbols, true
+    Dynamic:Acceleration, 2
+    Dynamic:Deceleration, 2
+    Enc:EncType, 4
+    Enc:Inc:RefSoftSyncMask, #x0000ffff
+    Enc:MaxCount, #x0000ffff
+    Enc:ScaleFactorDenominator, 1.6
+    Enc:ScaleFactorNumerator, 7.8125e-05
+    Id, 5
+    OtherSettings:AllowMotionCmdToSlave, true
+    OtherSettings:PulseDistanceNeg, 0.5
+    OtherSettings:PulseDistancePos, 0.5
+    Velo:FastManual, 1
+    Velo:Maximum, 1
+    Velo:SlowManual, 0.1
+
+
+
+Axis 6: YagX
+^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Setting, Value
+    :align: center
+
+    Axis ID, 6
+    Name, YagX
+    AxisType, 1
+    CreateSymbols, true
+    Dynamic:Acceleration, 2
+    Dynamic:Deceleration, 2
+    Enc:EncType, 4
+    Enc:Inc:RefSoftSyncMask, #x0000ffff
+    Enc:Inverse, true
+    Enc:MaxCount, #x0000ffff
+    Enc:ScaleFactorNumerator, 7.8125e-05
+    Id, 6
+    OtherSettings:AllowMotionCmdToSlave, true
+    OtherSettings:PulseDistanceNeg, 0.5
+    OtherSettings:PulseDistancePos, 0.5
+    Velo:FastManual, 1
+    Velo:Maximum, 1
+    Velo:SlowManual, 0.1
+
+
+
+Axis 7: YagY
+^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Setting, Value
+    :align: center
+
+    Axis ID, 7
+    Name, YagY
+    AxisType, 1
+    CreateSymbols, true
+    Dynamic:Acceleration, 2
+    Dynamic:Deceleration, 2
+    Enc:EncType, 4
+    Enc:Inc:RefSoftSyncMask, #x0000ffff
+    Enc:MaxCount, #x0000ffff
+    Enc:ScaleFactorNumerator, 7.8125e-05
+    Id, 7
+    OtherSettings:AllowMotionCmdToSlave, true
+    OtherSettings:PulseDistanceNeg, 0.5
+    OtherSettings:PulseDistancePos, 0.5
+    Velo:FastManual, 1
+    Velo:Maximum, 1
+    Velo:SlowManual, 0.1
+
+
+
+Axis 8: YagZ
+^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Setting, Value
+    :align: center
+
+    Axis ID, 8
+    Name, YagZ
+    AxisType, 1
+    CreateSymbols, true
+    Dynamic:Acceleration, 2
+    Dynamic:Deceleration, 2
+    Enc:EncType, 4
+    Enc:Inc:RefSoftSyncMask, #x0000ffff
+    Enc:Inverse, true
+    Enc:MaxCount, #x0000ffff
+    Enc:ScaleFactorNumerator, 9.6875e-05
+    Id, 8
+    OtherSettings:AllowMotionCmdToSlave, true
+    OtherSettings:PulseDistanceNeg, 0.5
+    OtherSettings:PulseDistancePos, 0.5
+    Velo:FastManual, 1
+    Velo:Maximum, 1
+    Velo:SlowManual, 0.1
+
+
+
+Axis 9: YagTheta
+^^^^^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Setting, Value
+    :align: center
+
+    Axis ID, 9
+    Name, YagTheta
+    AxisType, 1
+    CreateSymbols, true
+    Dynamic:Acceleration, 2
+    Dynamic:Deceleration, 2
+    Enc:EncType, 4
+    Enc:Inc:RefSoftSyncMask, #x0000ffff
+    Enc:MaxCount, #x0000ffff
+    Enc:ScaleFactorDenominator, 0.036667
+    Enc:ScaleFactorNumerator, 1.171875e-05
+    Id, 9
+    OtherSettings:AllowMotionCmdToSlave, true
+    OtherSettings:PulseDistanceNeg, 0.5
+    OtherSettings:PulseDistancePos, 0.5
+    Velo:FastManual, 1
+    Velo:Maximum, 1
+    Velo:SlowManual, 0.1
+
+
